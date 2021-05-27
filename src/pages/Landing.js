@@ -3,6 +3,7 @@ import {withStyles} from '@material-ui/core/styles';
 import Photo from './Photo.js';
 import Navbar from './Navbar.js';
 import firebase from "../firebase";
+import { Typography } from '@material-ui/core';
 
 const styles = {
     main: {
@@ -10,14 +11,13 @@ const styles = {
         display: "grid",
         width:"100vw",
         height: "100vh",
-        grid: "repeat(3, 400px) / 25% 50% 25%",
+        gridTemplateColumns: "auto 1000px auto",
         placeItems: "center",
-        "& navbar" : {
-            gridColumn: "1/6"
+        "& heading" : {
+            margin:"auto"
         },
         "& .photos": {
             gridColumn: "2/3",
-            gridRow: "2",
             gridTemplateColumns: "repeat(3, 1fr)",
             display: "grid",
             placeItems: "center",
@@ -42,16 +42,17 @@ function Landing(props) {
 
     }
 
-    const onSubmit = (e) => {
+    const onSubmit = async (e) => {
         e.preventDefault();
         const username = e.target.username.value;
         if (!username) {
             return
         }
-        db.collection("Photos").doc(username).set({
+        await db.collection("Photos").doc(username).set({
             name:username,
             photo:fileUrl
         })
+        window.location.reload()
     }
 
     useEffect(() => {
@@ -66,15 +67,17 @@ function Landing(props) {
 
     return (
         <div className={classes.main}>
-            
-            <div className="navbar">
-                <Navbar /> 
+            <Navbar /> 
+            <div className="heading">
+                <Typography variant="h1"> 
+                    Adventures of Coffee!
+                </Typography>
             </div>
-            <form onSubmit={onSubmit}>
+            {/* <form onSubmit={onSubmit}>
                 <input type="file" onChange={onFileChange} />
                 <input type="text" name="username" />
                 <button>Submit</button>
-            </form>
+            </form> */}
             <div className="photos">
                 {
                     users.map(user => {

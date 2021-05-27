@@ -18,7 +18,7 @@ function Navbar(props) {
                         </NavLink>
                     </IconButton>
                     <IconButton edge="end" >
-                        <NavLink to="/">
+                        <NavLink to="/login">
                             Login
                         </NavLink>
                     </IconButton>
