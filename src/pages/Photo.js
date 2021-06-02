@@ -9,6 +9,7 @@ const styles = {
 }
 
 function Photo(props) {
+    // Need to implement Crop feature instead of resizing my image
     const {classes, name, src} = props
     return (
         <div className={classes.main}>
