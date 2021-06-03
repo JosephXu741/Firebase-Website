@@ -1,34 +1,50 @@
 import React from 'react'
 import {AppBar, Toolbar, IconButton} from '@material-ui/core';
-import {NavLink} from "react-router-dom";
 import {withStyles} from '@material-ui/core/styles';
+import "react-social-icons"
+import { SocialIcon } from 'react-social-icons';
 
 const styles = {
     main: {
         display: "flex",
-        alignItems: "space-between"
+        justifyContent: "space-around"
+    },
+    // Have to change this to reflect resize changes
+    rightButton: {
+        flexGrow: "2"
+    },
+    toolbar: {
+        display: "flex",
+        justifyContent: "space-between",
+        width: "inherit"
     }
 }
 
 function Navbar(props) {
+    const {projects, education, bio} = props.functions
+    const {classes}= props
+
+
+
     return (
-        <div>
-            <Toolbar variant="dense">
-                <IconButton edge="start" >
-                    <NavLink to="/">
-                        Home
-                    </NavLink>
+        <div className={classes.main}>
+            <Toolbar className={classes.toolbar} color="#e1e5ea">
+                <IconButton onClick={() => projects()} edge="start" >
+                    Projects
                 </IconButton>
-                <IconButton edge="start" >
-                    <NavLink to="/about">
-                        About
-                    </NavLink>
+                <IconButton onClick={() => education()} edge="start" >
+                    Education
                 </IconButton>
-                <IconButton edge="end" >
-                    <NavLink to="/login">
-                        Login
-                    </NavLink>
+                <IconButton onClick={() => bio()} edge="start" >
+                    About
                 </IconButton>
+                <IconButton className={classes.rightButton}>
+                    <SocialIcon url="https://github.com/JosephXu741" />
+                </IconButton>
+                <IconButton >
+                    <SocialIcon url="https://www.linkedin.com/in/josephxu499/" />
+                </IconButton>
+                
             </Toolbar>
         </div>
     )

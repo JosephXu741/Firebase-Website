@@ -1,7 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {withStyles} from '@material-ui/core/styles';
 import Navbar from './Navbar.js';
 import { Typography } from '@material-ui/core';
+import About from "./About"
+import Education from "./Education"
+import Projects from "./Projects"
 import "@fontsource/roboto"
 import "@fontsource/roboto-slab"
 import "react-social-icons"
@@ -10,8 +13,8 @@ const styles = {
     main: {
         background: "#e1e5ea",
         display: "grid",
-        width:"100vw",
-        height: "100vh",
+        width:"100%",
+        height: "100%",
         justifyContent: "center",
         alignItems: "start",
         "& .body-div" : {
@@ -28,22 +31,41 @@ const styles = {
                 fontFamily: "roboto",
             },
         },
-        "& .navbar": {
-            placeItems: "center"
-        }
     },
+    content: {
+        placeItems: "center"
+    },
+    navbar: {
+        placeItems: "center"
+    }
 }
-
-
 
 
 
 function Home(props) {
     const {classes} = props
-    console.log()
+    const [showProjects, setShowProjects] = useState(false)
+    const [showEducation, setShowEducation] = useState(false)
+    const [showBio, setShowBio] = useState(true)
 
 
+    const projects = () => {
+        setShowBio(false)
+        setShowEducation(false)
+        setShowProjects(true)
+    }
 
+    const bio = () => {
+        setShowBio(true)
+        setShowEducation(false)
+        setShowProjects(false)
+    }
+
+    const education = () => {
+        setShowBio(false)
+        setShowEducation(true)
+        setShowProjects(false)
+    }
 
     return (
         <div className={classes.main}>
@@ -54,8 +76,13 @@ function Home(props) {
                 <Typography className="about">
                     I am a third-year Computer Science / Commerce student 
                 </Typography>
-                <div className="navbar">
-                    <Navbar />
+                <div className={classes.navbar}>
+                    <Navbar functions={{projects, bio, education}}/>
+                </div>
+                <div className={classes.content}>
+                    {showProjects && <Projects />}
+                    {showEducation && <Education />}
+                    {showBio && <About />}
                 </div>
             </div>
         </div>
