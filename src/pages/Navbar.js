@@ -7,7 +7,9 @@ import { SocialIcon } from 'react-social-icons';
 const styles = {
     main: {
         display: "flex",
-        justifyContent: "space-around"
+        justifyContent: "space-around",
+        paddingTop: "50px",
+        paddingBottom: "50px"
     },
     // Have to change this to reflect resize changes
     rightButton: {

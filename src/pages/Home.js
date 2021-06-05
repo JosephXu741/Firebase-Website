@@ -16,9 +16,11 @@ const styles = {
         width:"100%",
         height: "100%",
         justifyContent: "center",
-        alignItems: "start",
+
+        overflow: "auto",
         "& .body-div" : {
             grid: "200px / auto 1000px auto",
+            paddingBottom: "100px",
             "& .heading": {
                 fontSize:"100",
                 paddingTop: "100px",
@@ -33,7 +35,7 @@ const styles = {
         },
     },
     content: {
-        placeItems: "center"
+
     },
     navbar: {
         placeItems: "center"
@@ -47,7 +49,6 @@ function Home(props) {
     const [showProjects, setShowProjects] = useState(false)
     const [showEducation, setShowEducation] = useState(false)
     const [showBio, setShowBio] = useState(true)
-
 
     const projects = () => {
         setShowBio(false)
@@ -85,6 +86,12 @@ function Home(props) {
                     {showBio && <About />}
                 </div>
             </div>
+            <Typography>
+                This webpage is currently not mobile friendly! For best experience please view on desktop!
+            </Typography>
+            <Typography>
+                This website was built with React, for more information and source code, please visit LINK
+            </Typography>
         </div>
     )
 }
