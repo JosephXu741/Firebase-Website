@@ -5,6 +5,7 @@ const styles = {
     main: {
         height:"350px",
         width: "350px",
+        objectFit: "cover"
     }
 }
 
@@ -14,8 +15,6 @@ function Photo(props) {
     return (
         <div className={classes.main}>
             <img className={classes.main} src={src} alt={name} />
-            <p>{name}</p>
-            
         </div>
     )
 }

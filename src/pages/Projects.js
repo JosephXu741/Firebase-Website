@@ -1,7 +1,8 @@
 import React from 'react'
 import {withStyles} from '@material-ui/core/styles';
 import Photo from "./Photo"
-import { Typography, List, ListItem } from '@material-ui/core';
+import {List, ListItem } from '@material-ui/core';
+import firebase from "../firebase";
 
 const styles = {
     main: {
@@ -14,12 +15,13 @@ const styles = {
         placeItems: "center",
         placeSelf: "center",
         paddingBottom: "50px",
-        paddingTop: "16px"
+        paddingTop: "16px",
     },
     content: {
         gridColumns: "2/3",
         placeItems: "center",
-        fontFamily: "roboto"
+        fontFamily: "roboto",
+        width: "500px",
     },
     heading: {
         fontSize: "30",
@@ -30,15 +32,51 @@ const styles = {
 function Projects(props) {
     const {classes} = props
 
+    // useEffect(() => {
+    //     const fetchUsers = async () => {
+    //         const usersCollection = await db.collection("Photos").get()
+    //         setUsers(usersCollection.docs.map(doc => {
+    //             return doc.data()
+    //         }))
+    //     }
+    //     fetchUsers()
+    // }, [])
+
     return (
         <div className={classes.main}>
             <div className={classes.photos}>
-                <Photo />
+                <Photo name={"structs.sh"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/193028899_887721188489103_559145970860892502_n.png?alt=media&token=d1394fc4-b764-4698-a3c9-535dac8b2ce3"} />
             </div>
             <div className={classes.content}>
                 <List>
                     <ListItem className={classes.heading}>
-                        peepeepoopoo
+                        Structs - An Algorithm Visualiser
+                    </ListItem>
+                    <ListItem>
+                        Designing a platform tailored for UNSW students that emphasizes on visual learning
+                    </ListItem>
+                    <ListItem>
+                        The project mission is to create a user friendly website to complement UNSW courses, 
+                        where each feature / animation has a purpose in the narrative
+                    </ListItem>
+                    <ListItem>
+                        Our stack includes React, Nodejs, Express, and MongoDB, as well as React
+                        Libraries such as Framer Motion and React Router. Other software engineering 
+                        technologies include Figma for prototyping, Confluence to track tasks and progression
+                        and Agile principles for productivity
+                    </ListItem>
+                    <ListItem>
+                        This is a part of the 2021 CSE Projects Portfolio (deployable version coming soon!)
+                    </ListItem>
+                </List>
+            </div>
+            <div className={classes.photos}>
+                <Photo name={"hackathon"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/Screenshot%202021-06-08%20220653.png?alt=media&token=d82f3297-606f-45d5-84f9-4285950a26a4"} />
+            </div>
+            <div className={classes.content}>
+                <List>
+                    <ListItem className={classes.heading}>
+                        CSE Hackathon 
                     </ListItem>
                     <ListItem>
                         peepeepoopoo
@@ -46,38 +84,12 @@ function Projects(props) {
                 </List>
             </div>
             <div className={classes.photos}>
-                <Photo />
+                <Photo name={"afterpay"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/afterpay_1611164662.png?alt=media&token=ee875646-1e5f-47a8-8b0c-6369ca8dd748"}  />
             </div>
             <div className={classes.content}>
                 <List>
                     <ListItem className={classes.heading}>
-                        peepeepoopoo
-                    </ListItem>
-                    <ListItem>
-                        peepeepoopoo
-                    </ListItem>
-                </List>
-            </div>
-            <div className={classes.photos}>
-                <Photo />
-            </div>
-            <div className={classes.content}>
-                <List>
-                    <ListItem className={classes.heading}>
-                        peepeepoopoo
-                    </ListItem>
-                    <ListItem>
-                        peepeepoopoo
-                    </ListItem>
-                </List>
-            </div>
-            <div className={classes.photos}>
-                <Photo />
-            </div>
-            <div className={classes.content}>
-                <List>
-                    <ListItem className={classes.heading}>
-                        peepeepoopoo
+                        Case Comp
                     </ListItem>
                     <ListItem>
                         peepeepoopoo

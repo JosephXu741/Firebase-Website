@@ -167,7 +167,7 @@ function Education(props) {
                 </TimelineSeparator>
                 <TimelineContent>
                 <Paper elevation={0} className={classes.paper}>
-                <p>Data Warehousing & Data Mining (80)</p>
+                <p>Data Warehousing & Data Mining (83)</p>
                 <p>Capital Markets & Institutions (86)</p>
                 </Paper>
                 </TimelineContent>

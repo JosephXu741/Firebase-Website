@@ -72,10 +72,10 @@ function Home(props) {
         <div className={classes.main}>
             <div className="body-div">
                 <Typography className="heading">
-                    Hello! My name is Joseph!
+                    Hello! My Name is Joseph!
                 </Typography>
                 <Typography className="about">
-                    I am a third-year Computer Science / Commerce student 
+                    I am a Penultimate-year Computer Science / Commerce Student Studying at UNSW
                 </Typography>
                 <div className={classes.navbar}>
                     <Navbar functions={{projects, bio, education}}/>
@@ -88,9 +88,6 @@ function Home(props) {
             </div>
             <Typography>
                 This webpage is currently not mobile friendly! For best experience please view on desktop!
-            </Typography>
-            <Typography>
-                This website was built with React, for more information and source code, please visit LINK
             </Typography>
         </div>
     )
