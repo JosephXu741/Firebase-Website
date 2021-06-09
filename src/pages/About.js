@@ -2,13 +2,13 @@ import { Typography } from '@material-ui/core'
 import React from 'react'
 import {withStyles} from '@material-ui/core/styles';
 import Photo from "./Photo"
-import firebase from "../firebase";
+import {List, ListItem } from '@material-ui/core';
 
 
 const styles = {
     main: {
         display: "grid",
-        placeItmes: "center",
+
     },
     photo: {
         display: "grid",
@@ -19,8 +19,10 @@ const styles = {
         paddingTop: "16px"
     },
     bio: {
-        width: "400px",
-        paddingLeft: "140px"
+        width: "500px",
+        paddingLeft: "120px",
+        alignItems: "start"
+
     },
     sectionHeading: {
         placeSelf: "center",
@@ -33,6 +35,15 @@ const styles = {
         gap: "40px 0px",
         paddingBottom: "200px"
 
+    },
+    font: {
+        fontSize: 19,
+
+    },
+    heading: {
+        fontSize: "30",
+        fontWeight: "500",
+        alignItems: "start"
     }
 
 
@@ -47,8 +58,12 @@ function About(props) {
             <div className={classes.photo}>
                 <Photo name={"bio"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/DSC02345.JPG?alt=media&token=cf3286ea-3b89-42b1-9530-e2bfbdbddf51"}/>
                 <div className={classes.bio}>
-                 <Typography>
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum urna nulla, sed ultrices purus tempus lacinia. Praesent finibus dui sit amet diam porttitor, non dapibus diam vestibulum. Curabitur fringilla nec mauris et volutpat. Phasellus est risus, molestie at sapien vitae, pulvinar fermentum purus. Aenean ut lobortis enim, nec placerat risus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas tincidunt gravida enim. Integer aliquet eleifend imperdiet. Donec vel egestas nisl. Mauris a ultricies nisi.
+                 <Typography className={classes.font}>
+                    My main interests lie in Artificial Intelligence, Machine Learning and Data Analysis,
+                    as well as FinTech and full stack web development. Here, you can find my portfolio
+                    presented in an informal way, in an attempt to make it more visual and engaging. 
+                    I strongly believe that story telling is an esential skill and this website is my 
+                    attempt at doing so. My technical skills include Python, C, Javascript and SQL.
                  </Typography>
                 </div>
             </div>
@@ -57,32 +72,74 @@ function About(props) {
             </Typography>
             <div className={classes.photo}>
                 <Photo name={"Maccas"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/194085825_318493979889736_2658701469475096280_n.jpg?alt=media&token=ddc928ec-2545-4222-87b3-78ced397f9c0"} />
-                <div className={classes.bio}>
-                 <Typography>
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum urna nulla, sed ultrices purus tempus lacinia. Praesent finibus dui sit amet diam porttitor, non dapibus diam vestibulum. Curabitur fringilla nec mauris et volutpat. Phasellus est risus, molestie at sapien vitae, pulvinar fermentum purus. Aenean ut lobortis enim, nec placerat risus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas tincidunt gravida enim. Integer aliquet eleifend imperdiet. Donec vel egestas nisl. Mauris a ultricies nisi.
-                 </Typography>
-                </div>
-            </div>
-            <div className={classes.photo}>
-                <Photo name={"coffee"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/196088949_197834972201853_553927757694299212_n.jpg?alt=media&token=a731515c-dd84-472e-b008-719f4c926d12"} />
-                <div className={classes.bio}>
-                 <Typography>
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum urna nulla, sed ultrices purus tempus lacinia. Praesent finibus dui sit amet diam porttitor, non dapibus diam vestibulum. Curabitur fringilla nec mauris et volutpat. Phasellus est risus, molestie at sapien vitae, pulvinar fermentum purus. Aenean ut lobortis enim, nec placerat risus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas tincidunt gravida enim. Integer aliquet eleifend imperdiet. Donec vel egestas nisl. Mauris a ultricies nisi.
-                 </Typography>
-                </div>
+                <List className={classes.bio} >
+                    <ListItem className={classes.heading}>
+                        Shift Manager - McDonalds (2019 - Present)
+                    </ListItem>
+                    <ListItem>
+                        I started this job in 2015 and quickly became a customer experience leader
+                    </ListItem>
+                    <ListItem>
+                        Shortly after, my seniors offered a select group of employees to partake 
+                        in a sponsored apprenticeship in conjuction with the HSC
+                    </ListItem>
+                    <ListItem>
+                        After studying retail for two years, I graduated high-school with 
+                        a Certificate III in retail operations and was offered a management 
+                        position at my store
+                    </ListItem>
+                    <ListItem>
+                        Although I have gained invaluable experience in this position, 
+                        I am currently focused on entering the Computer Science Industry
+                        to progress my career
+                    </ListItem>
+                </List>
             </div>
             <div className={classes.photo}>
             {/* Photo by <a href="https://unsplash.com/@scienceinhd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Science in HD</a> on <a href="https://unsplash.com/collections/9895073/water-systems-technology?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */}
                 <Photo name={"maths"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/science-in-hd-aYxQrt5J6jM-unsplash.jpg?alt=media&token=82df2bae-6610-4eb0-a122-ff386ee95e44"} />
-                <div className={classes.bio}>
-                 <Typography>
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum urna nulla, sed ultrices purus tempus lacinia. Praesent finibus dui sit amet diam porttitor, non dapibus diam vestibulum. Curabitur fringilla nec mauris et volutpat. Phasellus est risus, molestie at sapien vitae, pulvinar fermentum purus. Aenean ut lobortis enim, nec placerat risus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas tincidunt gravida enim. Integer aliquet eleifend imperdiet. Donec vel egestas nisl. Mauris a ultricies nisi.
-                 </Typography>
-                </div>
+                <List className={classes.bio} >
+                    <ListItem className={classes.heading}>
+                        Private Tutor (2019 - Present)
+                    </ListItem>
+                    <ListItem>
+                        From word of mouth, I was offered to Private tutor several students 
+                        Mathematics 
+                    </ListItem>
+                    <ListItem>
+                        I planned lesson structures and created homework material from 
+                        textbooks as well as creating comprehensive lesson notes for my
+                        students
+                    </ListItem>
+                </List>
+            </div>
+            <div className={classes.photo}>
+                <Photo name={"coffee"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/196088949_197834972201853_553927757694299212_n.jpg?alt=media&token=a731515c-dd84-472e-b008-719f4c926d12"} />
+                <List className={classes.bio} >
+                    <ListItem className={classes.heading}>
+                        Head Barista - The Black Groodle (2018 - 2019)
+                    </ListItem>
+                    <ListItem>
+                        With the purpose of filling up my spare time post-HSC, I was offered a
+                        temporary full-time position at a Cafe.
+                    </ListItem>
+                    <ListItem>
+                        This job was my hobby job, the skills I had gained from McDondalds 
+                        easily transferred over. 
+                    </ListItem>
+                    <ListItem>
+                        I gained experience in forming meaningful relationships with regualar
+                        customers, which were mostly office workers
+                    </ListItem>
+                    <ListItem>
+                        My favourite quote from my boss: "The difference between a coffee maker
+                         and a Barista lies within the relationship with your customers"
+                    </ListItem>
+                </List>
             </div>
 
             <Typography variant="h3" className={classes.sectionHeading}>
-            Me in Six Photos
+            Me encapsulated in Six Photos
             </Typography>
 
             <div className={classes.collage}>
