@@ -18,27 +18,27 @@ const styles = {
         justifyContent: "center",
 
         overflow: "auto",
-        "& .body-div" : {
-            grid: "200px / auto 1000px auto",
-            paddingBottom: "100px",
-            "& .heading": {
-                fontSize:"100",
-                paddingTop: "100px",
-                fontFamily: "roboto-slab",
-            },
-            "& .about": {
-                alignSelf: "start",
-                fontSize:"25",
-                paddingTop: "100px",
-                fontFamily: "roboto",
-            },
-        },
     },
-    content: {
-
+    body: {
+        grid: "200px / auto 1000px auto",
+        paddingBottom: "100px",
+    },
+    heading: {
+        fontSize:"100",
+        paddingTop: "100px",
+        fontFamily: "roboto-slab",
+    },
+    about: {
+        alignSelf: "start",
+        fontSize:"25",
+        paddingTop: "100px",
+        fontFamily: "roboto",
     },
     navbar: {
         placeItems: "center"
+    },
+    footer: {
+        fontSize: 15
     }
 }
 
@@ -70,11 +70,11 @@ function Home(props) {
 
     return (
         <div className={classes.main}>
-            <div className="body-div">
-                <Typography className="heading">
+            <div className={classes.body}>
+                <Typography className={classes.heading}>
                     Hello! My Name is Joseph!
                 </Typography>
-                <Typography className="about">
+                <Typography className={classes.about}>
                     I am a Penultimate-year Computer Science / Commerce Student Studying at UNSW
                 </Typography>
                 <div className={classes.navbar}>
@@ -86,7 +86,7 @@ function Home(props) {
                     {showBio && <About />}
                 </div>
             </div>
-            <Typography>
+            <Typography className={classes.footer}>
                 This webpage is currently not mobile friendly! For best experience please view on desktop!
             </Typography>
         </div>

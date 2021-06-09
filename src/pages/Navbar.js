@@ -1,5 +1,5 @@
 import React from 'react'
-import {AppBar, Toolbar, IconButton} from '@material-ui/core';
+import {Toolbar, IconButton} from '@material-ui/core';
 import {withStyles} from '@material-ui/core/styles';
 import "react-social-icons"
 import { SocialIcon } from 'react-social-icons';
@@ -19,25 +19,32 @@ const styles = {
         display: "flex",
         justifyContent: "space-between",
         width: "inherit"
+    },
+    underline: {
+        textDecoration: "underline"
     }
 }
 
 function Navbar(props) {
     const {projects, education, bio} = props.functions
-    const {classes}= props
+    const {classes} = props
+    const [underline, setUnderline] = React.useState('about')
 
 
 
     return (
         <div className={classes.main}>
             <Toolbar className={classes.toolbar} color="#e1e5ea">
-                <IconButton onClick={() => projects()} edge="start" >
+                <IconButton className={underline === "projects" ? classes.underline : ''} 
+                            onClick={() => {projects(); setUnderline('projects')}} >
                     Projects
                 </IconButton>
-                <IconButton onClick={() => education()} edge="start" >
+                <IconButton className={underline === "education" ? classes.underline : ''} 
+                            onClick={() => {education(); setUnderline('education')}} >
                     Education
                 </IconButton>
-                <IconButton onClick={() => bio()} edge="start" >
+                <IconButton className={underline === "about" ? classes.underline : ''} 
+                            onClick={() => {bio(); setUnderline('about')}} >
                     About
                 </IconButton>
                 <IconButton className={classes.rightButton}>

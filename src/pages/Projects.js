@@ -66,7 +66,7 @@ function Projects(props) {
             <div className={classes.content}>
                 <List>
                     <ListItem className={classes.heading}>
-                        CSE Hackathon - 20203
+                        CSE Hackathon - 2020
                     </ListItem>
                     <ListItem>
                         Prompt: "Create a Product that will Assist and Relieve the Effects of the Coronavirus"
