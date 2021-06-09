@@ -2,7 +2,6 @@ import React from 'react'
 import {withStyles} from '@material-ui/core/styles';
 import Photo from "./Photo"
 import {List, ListItem } from '@material-ui/core';
-import firebase from "../firebase";
 
 const styles = {
     main: {
@@ -97,7 +96,7 @@ function Projects(props) {
                     <ListItem>
                         Stimulus: "You are a consulting firm and you are to present a report to NSW Government
                         about how relieving the financial strain of the household sector. In your report
-                        discuss how Aferpay's balance sheet affects this"
+                        discuss how Afterpay's balance sheet affects this"
                     </ListItem>
                     <ListItem>
                         Finalists
