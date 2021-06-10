@@ -62,7 +62,7 @@ function About(props) {
                     My main interests lie in Artificial Intelligence, Machine Learning and Data Analysis,
                     as well as FinTech and full stack web development. Here, you can find my portfolio
                     presented in an informal way, in an attempt to make it more visual and engaging. 
-                    I strongly believe that story telling is an esential skill and this website is my 
+                    I strongly believe that story telling is an essential skill and this website is my 
                     attempt at doing so. My technical skills include Python, C, Javascript and SQL.
                  </Typography>
                 </div>

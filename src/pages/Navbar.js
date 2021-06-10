@@ -35,17 +35,17 @@ function Navbar(props) {
     return (
         <div className={classes.main}>
             <Toolbar className={classes.toolbar} color="#e1e5ea">
-                <IconButton className={underline === "projects" ? classes.underline : ''} 
-                            onClick={() => {projects(); setUnderline('projects')}} >
-                    Projects
+                <IconButton className={underline === "about" ? classes.underline : ''} 
+                            onClick={() => {bio(); setUnderline('about')}} >
+                    About
                 </IconButton>
                 <IconButton className={underline === "education" ? classes.underline : ''} 
                             onClick={() => {education(); setUnderline('education')}} >
                     Education
                 </IconButton>
-                <IconButton className={underline === "about" ? classes.underline : ''} 
-                            onClick={() => {bio(); setUnderline('about')}} >
-                    About
+                <IconButton className={underline === "projects" ? classes.underline : ''} 
+                            onClick={() => {projects(); setUnderline('projects')}} >
+                    Projects
                 </IconButton>
                 <IconButton className={classes.rightButton}>
                     <SocialIcon url="https://github.com/JosephXu741" />
