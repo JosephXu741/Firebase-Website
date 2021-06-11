@@ -24,15 +24,25 @@ const styles = {
         paddingBottom: "100px",
     },
     heading: {
-        fontSize:"100",
-        paddingTop: "100px",
+        fontSize:"14vw",
+        paddingTop: "18vh",
         fontFamily: "roboto-slab",
+        overflow: "auto",
+        width: "66vw",
+        paddingLeft: "6vw"
+    },
+    subheading: {
+        fontSize:"6vw",
+        fontFamily: "roboto-slab",
+        overflow: "auto",
+        width: "66vw",
+        paddingLeft: "6vw"
     },
     about: {
-        alignSelf: "start",
-        fontSize:"25",
-        paddingTop: "100px",
+        fontSize:"1.5vw",
         fontFamily: "roboto",
+        paddingBottom:"2vh",
+        paddingLeft: "6vw"
     },
     navbar: {
         placeItems: "center"
@@ -72,7 +82,10 @@ function Home(props) {
         <div className={classes.main}>
             <div className={classes.body}>
                 <Typography className={classes.heading}>
-                    Hello! My Name is Joseph!
+                    Hello!
+                </Typography>
+                <Typography className={classes.subheading}>
+                    My Name is Joseph!
                 </Typography>
                 <Typography className={classes.about}>
                     I am a Penultimate-year Computer Science / Commerce Student Studying at UNSW

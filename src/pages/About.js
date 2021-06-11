@@ -19,7 +19,7 @@ const styles = {
         paddingTop: "16px"
     },
     bio: {
-        width: "500px",
+        width: "400",
         paddingLeft: "120px",
         alignItems: "start"
 
@@ -56,7 +56,7 @@ function About(props) {
         <div className={classes.main}>
 
             <div className={classes.photo}>
-                <Photo name={"bio"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/DSC02345.JPG?alt=media&token=cf3286ea-3b89-42b1-9530-e2bfbdbddf51"}/>
+                <Photo name={"bio"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/Static%2FDSC02345.jpg?alt=media&token=ad08e3a1-7ccf-4639-b4ea-aa1144585c1d"}/>
                 <div className={classes.bio}>
                  <Typography className={classes.font}>
                     My main interests lie in Artificial Intelligence, Machine Learning and Data Analysis,
@@ -71,7 +71,7 @@ function About(props) {
             Work Experience
             </Typography>
             <div className={classes.photo}>
-                <Photo name={"Maccas"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/194085825_318493979889736_2658701469475096280_n.jpg?alt=media&token=ddc928ec-2545-4222-87b3-78ced397f9c0"} />
+                <Photo name={"Maccas"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/Static%2F194085825_318493979889736_2658701469475096280_n.jpg?alt=media&token=762e89f6-a1b6-4bc9-a77c-7f8746016362"} />
                 <List className={classes.bio} >
                     <ListItem className={classes.heading}>
                         Shift Manager - McDonalds (2019 - Present)
@@ -97,7 +97,7 @@ function About(props) {
             </div>
             <div className={classes.photo}>
             {/* Photo by <a href="https://unsplash.com/@scienceinhd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Science in HD</a> on <a href="https://unsplash.com/collections/9895073/water-systems-technology?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */}
-                <Photo name={"maths"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/science-in-hd-aYxQrt5J6jM-unsplash.jpg?alt=media&token=82df2bae-6610-4eb0-a122-ff386ee95e44"} />
+                <Photo name={"maths"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/Static%2Fscience-in-hd-aYxQrt5J6jM-unsplash.jpg?alt=media&token=1d1cea93-5674-4dc8-b33b-546d42412e01"} />
                 <List className={classes.bio} >
                     <ListItem className={classes.heading}>
                         Private Tutor (2019 - Present)
@@ -114,7 +114,7 @@ function About(props) {
                 </List>
             </div>
             <div className={classes.photo}>
-                <Photo name={"coffee"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/196088949_197834972201853_553927757694299212_n.jpg?alt=media&token=a731515c-dd84-472e-b008-719f4c926d12"} />
+                <Photo name={"coffee"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/Static%2F196088949_197834972201853_553927757694299212_n.jpg?alt=media&token=64a77184-f58a-4981-bd16-eeb477d57ce6"} />
                 <List className={classes.bio} >
                     <ListItem className={classes.heading}>
                         Head Barista - The Black Groodle (2018 - 2019)
@@ -143,12 +143,12 @@ function About(props) {
             </Typography>
 
             <div className={classes.collage}>
-                <Photo name={"sunrise"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/DSC04082.JPG?alt=media&token=6addfb86-13f4-449c-8066-46a3e507c9ac"} />
-                <Photo name={"light"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/IMG_7735.JPG?alt=media&token=d94ef286-b764-4129-afc9-eb539dd16b24"} />
-                <Photo name={"cat"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/DSC_0078.JPG?alt=media&token=3f78b33c-3a17-475b-bbe8-db0f2a709a78"} />
-                <Photo name={"stars"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/IMG_5997.JPG?alt=media&token=a39128b3-6ef9-48d2-8697-0fe4725fc04a"} />
-                <Photo name={"sunset"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/received_414965896541445.jpeg?alt=media&token=f7a331de-0f90-44f1-b756-a315e994f156"} />
-                <Photo name={"uts"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/square.jpg?alt=media&token=2451f702-c5e8-4332-ac55-ee1679e71e6c"} />
+                <Photo name={"sunrise"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/Static%2FDSC04082.jpg?alt=media&token=e86b98c4-b940-4b3f-88f4-c7a5aab8a13a"} />
+                <Photo name={"light"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/Static%2FIMG_7735.jpg?alt=media&token=1eb9a480-dabb-41f7-ab49-6a80ff6e4872"} />
+                <Photo name={"cat"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/Static%2FDSC_0078.jpg?alt=media&token=68d3018e-ab8b-4fc9-9bf5-64b553ed9620"} />
+                <Photo name={"stars"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/Static%2FIMG_5997.jpg?alt=media&token=db8b09bd-fad1-4739-8709-d934caaca0fc"} />
+                <Photo name={"sunset"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/Static%2Freceived_414965896541445.jpg?alt=media&token=a330d453-bf48-4c70-95bd-4bf7e6cb824d"} />
+                <Photo name={"uts"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/Static%2Fsquare.jpg?alt=media&token=a6a82847-688a-4665-9724-6aade9756722"} />
 
             </div>
 

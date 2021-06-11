@@ -20,7 +20,8 @@ const styles = {
         gridColumns: "2/3",
         placeItems: "center",
         fontFamily: "roboto",
-        width: "500px",
+        width: "500",
+        overflow: "auto"
     },
     heading: {
         fontSize: "30",
@@ -34,7 +35,7 @@ function Projects(props) {
     return (
         <div className={classes.main}>
             <div className={classes.photos}>
-                <Photo name={"structs.sh"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/193028899_887721188489103_559145970860892502_n.png?alt=media&token=d1394fc4-b764-4698-a3c9-535dac8b2ce3"} />
+                <Photo name={"structs.sh"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/Static%2F193028899_887721188489103_559145970860892502_n.jpg?alt=media&token=62a3085e-e162-4a28-8604-ca1953a03ca2"} />
             </div>
             <div className={classes.content}>
                 <List>
@@ -60,7 +61,7 @@ function Projects(props) {
                 </List>
             </div>
             <div className={classes.photos}>
-                <Photo name={"hackathon"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/Screenshot%202021-06-08%20220653.png?alt=media&token=d82f3297-606f-45d5-84f9-4285950a26a4"} />
+                <Photo name={"hackathon"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/Static%2FScreenshot%202021-06-08%20220653.jpg?alt=media&token=41be5a56-5a98-47c7-95d3-651c8a0f8e4a"} />
             </div>
             <div className={classes.content}>
                 <List>
@@ -86,7 +87,7 @@ function Projects(props) {
                 </List>
             </div>
             <div className={classes.photos}>
-                <Photo name={"afterpay"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/afterpay_1611164662.png?alt=media&token=ee875646-1e5f-47a8-8b0c-6369ca8dd748"}  />
+                <Photo name={"afterpay"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/Static%2Fafterpay_1611164662.jpg?alt=media&token=98916bb1-50c5-48ea-a4f5-897dc8fe0970"}  />
             </div>
             <div className={classes.content}>
                 <List>
