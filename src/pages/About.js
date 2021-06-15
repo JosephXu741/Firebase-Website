@@ -16,24 +16,39 @@ const styles = {
         placeItems: "center",
         placeSelf: "center",
         paddingBottom: "50px",
-        paddingTop: "16px"
+        paddingTop: "16px",
+        "@media (max-width: 1000px)" : {
+            gridTemplateColumns: "100%",
+        }
     },
     bio: {
         width: "400",
         paddingLeft: "120px",
-        alignItems: "start"
+        alignItems: "start",
+        textAlign: "center",
+        "@media (max-width: 1000px)" : {
+            paddingLeft: 0,
+            width: 350,
+            height: "auto",
+            paddingTop: 50,
+            textAlign: "center"
+        }
 
     },
     sectionHeading: {
         placeSelf: "center",
         paddingBottom: "60px",
+        textAlign: "center"
     },
     collage: {
         gridTemplateColumns: "repeat(2, 1fr)",
         display: "grid",
         placeItems: "center",
         gap: "40px 0px",
-        paddingBottom: "200px"
+        paddingBottom: "200px",
+        "@media (max-width: 760px)" : {
+            gridTemplateColumns: "100%",
+        }
 
     },
     font: {

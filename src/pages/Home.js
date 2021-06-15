@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import {withStyles} from '@material-ui/core/styles';
 import Navbar from './Navbar.js';
 import { Typography } from '@material-ui/core';
@@ -13,14 +13,10 @@ const styles = {
     main: {
         background: "#e1e5ea",
         display: "grid",
-        width:"100%",
-        height: "100%",
-        justifyContent: "center",
-
         overflow: "auto",
     },
     body: {
-        grid: "200px / auto 1000px auto",
+        grid: "auto / auto 1000px auto",
         paddingBottom: "100px",
     },
     heading: {
@@ -59,23 +55,34 @@ function Home(props) {
     const [showProjects, setShowProjects] = useState(false)
     const [showEducation, setShowEducation] = useState(false)
     const [showBio, setShowBio] = useState(true)
+    const navbar = useRef(null)
+
+    const scroll = () => {
+        window.scrollTo({
+            top: navbar.current.offsetTop,
+            behavior: 'smooth' 
+        })
+    }
 
     const projects = () => {
         setShowBio(false)
         setShowEducation(false)
         setShowProjects(true)
+        scroll()
     }
 
     const bio = () => {
         setShowBio(true)
         setShowEducation(false)
         setShowProjects(false)
+        scroll()
     }
 
     const education = () => {
         setShowBio(false)
         setShowEducation(true)
         setShowProjects(false)
+        scroll()
     }
 
     return (
@@ -90,7 +97,7 @@ function Home(props) {
                 <Typography className={classes.about}>
                     I am a Penultimate-year Computer Science / Commerce Student Studying at UNSW
                 </Typography>
-                <div className={classes.navbar}>
+                <div ref={navbar} className={classes.navbar}>
                     <Navbar functions={{projects, bio, education}}/>
                 </div>
                 <div className={classes.content}>
@@ -99,9 +106,6 @@ function Home(props) {
                     {showBio && <About />}
                 </div>
             </div>
-            <Typography className={classes.footer}>
-                This webpage is currently not mobile friendly! For best experience please view on desktop!
-            </Typography>
         </div>
     )
 }

@@ -6,28 +6,38 @@ import {List, ListItem } from '@material-ui/core';
 const styles = {
     main: {
         display: "grid",
-        placeItmes: "center",
-        gridTemplateColumns: "50% 50%",
     },
     photos: {
-        gridColumns: "1/2",
+        display: "grid",
+        gridTemplateColumns: "50% 50%",
         placeItems: "center",
         placeSelf: "center",
         paddingBottom: "50px",
         paddingTop: "16px",
+        "@media (max-width: 1000px)" : {
+            gridTemplateColumns: "100%",
+        }
     },
-    content: {
-        gridColumns: "2/3",
-        placeItems: "center",
-        fontFamily: "roboto",
-        width: "500",
-        overflow: "auto"
+    bio: {
+        width: "400",
+        paddingLeft: "120px",
+        alignItems: "start",
+        "@media (max-width: 1000px)" : {
+            paddingLeft: 0,
+            width: 350,
+            height: "auto",
+            paddingTop: 50,
+            textAlign: "center"
+        }
+
     },
     heading: {
         fontSize: "30",
-        fontWeight: "500"
-    }
+        fontWeight: "500",
+        alignItems: "start"
+    },
 }
+
 
 function Projects(props) {
     const {classes} = props
@@ -36,9 +46,7 @@ function Projects(props) {
         <div className={classes.main}>
             <div className={classes.photos}>
                 <Photo name={"structs.sh"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/Static%2F193028899_887721188489103_559145970860892502_n.jpg?alt=media&token=62a3085e-e162-4a28-8604-ca1953a03ca2"} />
-            </div>
-            <div className={classes.content}>
-                <List>
+                <List className={classes.bio}>
                     <ListItem className={classes.heading}>
                         Structs - An Algorithm Visualiser
                     </ListItem>
@@ -62,9 +70,7 @@ function Projects(props) {
             </div>
             <div className={classes.photos}>
                 <Photo name={"hackathon"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/Static%2FScreenshot%202021-06-08%20220653.jpg?alt=media&token=41be5a56-5a98-47c7-95d3-651c8a0f8e4a"} />
-            </div>
-            <div className={classes.content}>
-                <List>
+                <List className={classes.bio}>
                     <ListItem className={classes.heading}>
                         CSE Hackathon - 2020
                     </ListItem>
@@ -88,9 +94,7 @@ function Projects(props) {
             </div>
             <div className={classes.photos}>
                 <Photo name={"afterpay"} src={"https://firebasestorage.googleapis.com/v0/b/website-8fcd4.appspot.com/o/Static%2Fafterpay_1611164662.jpg?alt=media&token=98916bb1-50c5-48ea-a4f5-897dc8fe0970"}  />
-            </div>
-            <div className={classes.content}>
-                <List>
+                <List  className={classes.bio}>
                     <ListItem className={classes.heading}>
                         Case Comp - Government Consulting
                     </ListItem>
