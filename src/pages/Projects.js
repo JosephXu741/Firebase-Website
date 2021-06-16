@@ -51,20 +51,20 @@ function Projects(props) {
                         Structs - An Algorithm Visualiser
                     </ListItem>
                     <ListItem>
-                        Designing a platform tailored for UNSW students that emphasizes visual learning
+                        Designing a platform tailored for UNSW students that emphasizes visual learning.
                     </ListItem>
                     <ListItem>
                         The project mission is to create a user friendly website to complement UNSW courses, 
-                        where each feature / animation has a purpose in the learning process
+                        where each feature / animation has a purpose in the learning process.
                     </ListItem>
                     <ListItem>
                         Our stack includes React, Nodejs, Express, and MongoDB, as well as React
                         Libraries such as Framer Motion and React Router. Other software engineering 
                         technologies include Figma for prototyping, Confluence to track tasks and progression
-                        and Agile principles for productivity
+                        and Agile principles for productivity.
                     </ListItem>
                     <ListItem>
-                        This is a part of the 2021 CSE Projects Portfolio (deployable version coming soon!)
+                        This is a part of the 2021 CSE Projects Portfolio. (deployable version coming soon!)
                     </ListItem>
                 </List>
             </div>
@@ -75,20 +75,20 @@ function Projects(props) {
                         CSE Hackathon - 2020
                     </ListItem>
                     <ListItem>
-                        Prompt: "Create a Product that will Assist and Relieve the Effects of the Coronavirus"
+                        Prompt: "Create a Product that will Assist and Relieve the Effects of the Coronavirus".
                     </ListItem>
                     <ListItem>
                         Our team aimed to assist the propagation of information about the virus through 
                         a mobile subscription service, where an individual will receive a text message
-                        if a case occurs in their surrounding neighbourhood
+                        if a case occurs in their surrounding neighbourhood.
                     </ListItem>
                     <ListItem>
                         Users will save time scouring through NSW's website to search for their specific 
-                        location, increasing their accessibility to information
+                        location, increasing their accessibility to information.
                     </ListItem>
                     <ListItem>
                         Information was gathered using a webscraper, and the subscription was available
-                        through a website
+                        through a website.
                     </ListItem>
                 </List>
             </div>
@@ -101,10 +101,10 @@ function Projects(props) {
                     <ListItem>
                         Stimulus: "You are a consulting firm and you are to present a report to NSW Government
                         about how relieving the financial strain of the household sector. In your report
-                        discuss how Afterpay's balance sheet affects this"
+                        discuss how Afterpay's balance sheet affects this".
                     </ListItem>
                     <ListItem>
-                        Finalists
+                        Finalists.
                     </ListItem>
                 </List>
             </div>

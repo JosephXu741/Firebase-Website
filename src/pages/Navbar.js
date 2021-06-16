@@ -48,10 +48,10 @@ function Navbar(props) {
                     Projects
                 </IconButton>
                 <IconButton className={classes.rightButton}>
-                    <SocialIcon url="https://github.com/JosephXu741" />
+                    <SocialIcon url="https://github.com/JosephXu741" target="_blank" rel="noopener noreferrer" />
                 </IconButton>
                 <IconButton >
-                    <SocialIcon url="https://www.linkedin.com/in/josephxu499/" />
+                    <SocialIcon url="https://www.linkedin.com/in/josephxu499/" target="_blank" rel="noopener noreferrer" />
                 </IconButton>
                 
             </Toolbar>

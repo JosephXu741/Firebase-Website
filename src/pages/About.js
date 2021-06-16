@@ -25,13 +25,13 @@ const styles = {
         width: "400",
         paddingLeft: "120px",
         alignItems: "start",
-        textAlign: "center",
+        textAlign: "left",
         "@media (max-width: 1000px)" : {
             paddingLeft: 0,
             width: 350,
             height: "auto",
             paddingTop: 50,
-            textAlign: "center"
+            textAlign: "left"
         }
 
     },
@@ -92,21 +92,21 @@ function About(props) {
                         Shift Manager - McDonalds (2019 - Present)
                     </ListItem>
                     <ListItem>
-                        I started this job in 2015 and quickly became a customer experience leader
+                        I started this job in 2015 and quickly became a customer experience leader.
                     </ListItem>
                     <ListItem>
                         Shortly after, my seniors offered a select group of employees to partake 
-                        in a sponsored apprenticeship in conjuction with the HSC
+                        in a sponsored apprenticeship in conjuction with the HSC.
                     </ListItem>
                     <ListItem>
                         After studying retail for two years, I graduated high-school with 
                         a Certificate III in retail operations and was offered a management 
-                        position at my store
+                        position at my store.
                     </ListItem>
                     <ListItem>
                         Although I have gained invaluable experience in this position, 
                         I am currently focused on entering the Computer Science Industry
-                        to progress my career
+                        to progress my career.
                     </ListItem>
                 </List>
             </div>
@@ -119,12 +119,12 @@ function About(props) {
                     </ListItem>
                     <ListItem>
                         From word of mouth, I was offered to Private tutor several students 
-                        Mathematics 
+                        Mathematics.
                     </ListItem>
                     <ListItem>
                         I planned lesson structures and created homework material from 
                         textbooks as well as creating comprehensive lesson notes for my
-                        students
+                        students.
                     </ListItem>
                 </List>
             </div>
@@ -144,11 +144,11 @@ function About(props) {
                     </ListItem>
                     <ListItem>
                         I gained experience in forming meaningful relationships with regualar
-                        customers, which were mostly office workers
+                        customers, which were mostly office workers.
                     </ListItem>
                     <ListItem>
                         My favourite quote from my boss: "The difference between a coffee maker
-                         and a Barista lies within the relationship with your customers"
+                         and a Barista lies within the relationship with your customers".
                     </ListItem>
                 </List>
             </div>
