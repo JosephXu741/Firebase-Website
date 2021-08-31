@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.p-card {
+    max-width: 1400px;
+    width: 100vw;
+    max-height: 700px;
+    height: 50vw;
+    @apply my-40;
+}
