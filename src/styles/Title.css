@@ -1,0 +1,15 @@
+.headline {
+    @apply font-sans text-7xl h-auto grid items-center;
+    @apply md:text-9xl;
+    width: clamp(300px, 95%, 1400px);
+}
+
+.content {
+    @apply text-lg w-2/3;
+    @apply md:text-2xl;
+    width: clamp(300px, 90%, 1400px);
+}
+
+.continue {
+    @apply  w-12 h-12 bg-pink-400 justify-self-end absolute bottom-16;
+}

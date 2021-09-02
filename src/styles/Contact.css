@@ -1,0 +1,19 @@
+.profile {
+    @apply bg-red-500 ;
+    @apply 2xl:absolute 2xl:right-1/2;
+    width: clamp(150px, 100%, 700px);
+}
+
+.footer-headline {
+    @apply font-sans text-7xl h-auto grid items-center mb-16;
+    @apply md:text-9xl;
+}
+
+.footer-content {
+    @apply text-lg mb-16;
+    @apply md:text-2xl;
+}
+
+.icons-container {
+    @apply w-full h-20 bg-purple-600 grid items-end;
+}

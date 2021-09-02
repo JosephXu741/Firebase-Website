@@ -11,7 +11,7 @@ function ProjectCard(props) {
             <div className=" bg-green-300 p-textbox">
 
                 <div className="p-text bg-green-500">
-                    sooka blyat
+                    Project card
                     
                     <div className="arrow bg-blue-600">
 
