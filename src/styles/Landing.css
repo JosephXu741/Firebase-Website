@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.base{
+    @apply h-auto grid justify-items-center z-50;
+}

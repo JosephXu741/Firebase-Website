@@ -3,8 +3,8 @@ import "../styles/Contact.css"
 
 function Contact() {
     return (
-        <div className="bg-yellow-100 grid items-center min-h-screen min-w-full mt-40">
-            <div className="mx-4 grid relative">
+        <div className="footer ">
+            <div className="profile-wrapper">
                 <div className="profile ">
                     <div className="footer-headline ">
                         Say Hello!
@@ -13,9 +13,9 @@ function Contact() {
                         joseph499@hotmail.com
                     </div>
                 </div>
-            </div>
-            <div className="icons-container">
+                <div className="icons-container">
 
+                </div>
             </div>
         </div>
     )

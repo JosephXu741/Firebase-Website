@@ -1,10 +1,20 @@
-.headline {
+.heading {
+    @apply  grid items-center min-h-screen min-w-full mb-10 md:mb-40;
+    background: rgb(112,112,187);
+    background: radial-gradient(circle, rgba(112,112,187,1) 0%, rgba(39,128,185,1) 100%);
+}
+
+.heading-wrapper {
+    @apply mx-4 grid space-y-8 place-items-center;
+}
+
+.heading-headline {
     @apply font-sans text-7xl h-auto grid items-center;
     @apply md:text-9xl;
     width: clamp(300px, 95%, 1400px);
 }
 
-.content {
+.heading-content {
     @apply text-lg w-2/3;
     @apply md:text-2xl;
     width: clamp(300px, 90%, 1400px);

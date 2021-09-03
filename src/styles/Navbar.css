@@ -1,0 +1,14 @@
+.nav {
+    width: clamp(300px, 95%, 1400px);
+    @apply fixed p-4 h-16 z-50 top-0 flex justify-between;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-logo {
+    @apply flex self-center;
+}
+
+.nav-right {
+    @apply flex flex-row-reverse space-x-4 space-x-reverse self-center;
+}

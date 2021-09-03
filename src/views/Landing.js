@@ -3,11 +3,13 @@ import "../styles/Landing.css"
 import ProjectCard from '../components/ProjectCard'
 import Title from '../components/Title'
 import Contact from '../components/Contact'
+import Navbar from '../components/Navbar'
 
 function Landing() {
     return (
         <div>
-            <div className="bg-blue-100 h-auto grid justify-items-center">
+            <div className="base ">
+                <Navbar />
                 <Title />
                 <ProjectCard />
                 <ProjectCard alternate={true}/>

@@ -1,7 +1,18 @@
+.footer {
+    @apply grid place-items-center min-h-screen min-w-full mt-10 md:mt-40;
+    background: rgb(255,126,109);
+    background: linear-gradient(90deg, rgba(255,126,109,1) 20%, rgba(255,206,93,1) 80%);
+}
+
 .profile {
-    @apply bg-red-500 ;
+    @applypl-4 grid place-items-center;
     @apply 2xl:absolute 2xl:right-1/2;
     width: clamp(150px, 100%, 700px);
+}
+
+.profile-wrapper {
+    width: clamp(300px, 100%, 1400px);
+    @apply mx-4 relative h-full grid justify-items-start items-center;
 }
 
 .footer-headline {
@@ -15,5 +26,6 @@
 }
 
 .icons-container {
-    @apply w-full h-20 bg-purple-600 grid items-end;
+    width: clamp(150px, 100%, 700px);
+    @apply h-20 justify-self-start absolute bottom-16;
 }
