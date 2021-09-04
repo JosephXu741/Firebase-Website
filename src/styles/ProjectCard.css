@@ -25,19 +25,19 @@
 }
 
 .p-textbox {
-    @apply w-full z-10 h-1/2 flex items-center justify-center;
+    @apply w-full z-10 h-1/2 flex md:items-center items-start justify-start;
     @apply md:w-1/2 md:h-full;
 }
 
 
 
 .p-text {
-    width: clamp(100px, 100%, 500px);
+    width: clamp(100px, 100%, 700px);
     @apply p-4 grid z-10;
 }
 
 .arrow {
-    @apply w-12 h-12 justify-self-center;
+    @apply w-12 h-12 justify-self-start;
 }
 
 .arrow:hover {
