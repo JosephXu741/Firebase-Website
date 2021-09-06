@@ -12,8 +12,8 @@ function Landing() {
                 <Navbar />
                 <Title />
                 <ProjectCard />
-                <ProjectCard alternate={true}/>
-                <ProjectCard />
+                {/* <ProjectCard alternate={true}/>
+                <ProjectCard /> */}
                 <Contact /> 
             </div>
         </div>

@@ -1,12 +1,39 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import "../styles/ProjectCard.css"
+import lottie from "lottie-web"
+import Animation from "../Animations/no-glass-20001-0030.mp4.lottie.json"
 
 function ProjectCard(props) {
-    const {alternate} = props
+    const {alternate} = props;
+    let controls = null;
+
+    useEffect(() => {
+        controls = lottie.loadAnimation({
+            container: document.querySelector("#structs"),
+            animationData: Animation,
+            loop: false,
+            autoplay: false,
+        })
+    }, [])
+
+    const handleEnter = () => {
+        lottie.setDirection(1);
+        controls.play();
+    }    
+    const handleLeave = () => {
+        lottie.setDirection(-1);
+        controls.play();
+    }    
+
+
     return (
         <div className={`p-card ${alternate ? "justify-end" : ""}`} >
-            <div className="display bg-purple-200">
-
+            <div  
+                className="display" 
+                id="structs"    
+                onMouseEnter={handleEnter}
+                onMouseLeave={handleLeave}
+            >
             </div>
             <div className="p-textbox">
 
