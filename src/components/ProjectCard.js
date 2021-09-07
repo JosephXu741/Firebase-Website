@@ -1,14 +1,14 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useRef} from 'react'
 import "../styles/ProjectCard.css"
 import lottie from "lottie-web"
 import Animation from "../Animations/no-glass-20001-0030.mp4.lottie.json"
 
 function ProjectCard(props) {
     const {alternate} = props;
-    let controls = null;
+    const controls = useRef()
 
     useEffect(() => {
-        controls = lottie.loadAnimation({
+        controls.current = lottie.loadAnimation({
             container: document.querySelector("#structs"),
             animationData: Animation,
             loop: false,
@@ -18,11 +18,11 @@ function ProjectCard(props) {
 
     const handleEnter = () => {
         lottie.setDirection(1);
-        controls.play();
+        controls.current.play();
     }    
     const handleLeave = () => {
         lottie.setDirection(-1);
-        controls.play();
+        controls.current.play();
     }    
 
 
