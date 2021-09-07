@@ -5,34 +5,34 @@ import anime from "animejs"
 
 function Title() {  
 
-    const background = useRef()
+    const backgroundTrigger = useRef()
 
     useEffect(() => {
-        background.current.style.height = document.body.scrollHeight;
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 200) {
-                if (background.current.style.opacity > 0) {
-                    anime({
-                        targets: background.current,
-                        opacity: 0
-                    })
-                }
+        const io = new IntersectionObserver((entry) => {
+            const e = entry[0];
+            console.log(e.isIntersecting)
+            if (e.isIntersecting) {
+                anime({
+                    targets: document.body,
+                    background: "#ADD8E6",
+                    duration: 3000,
+                })
             } else {
-                if (background.current.style.opacity < 1) {
-                    anime({
-                        targets: background.current,
-                        opacity: 1
-                    })
-                }
+                anime({
+                    targets: document.body,
+                    background: "#FFF",
+                    duration: 3000,
+                })
             }
-        })
+        });
+        io.observe(backgroundTrigger.current)
     }, [])
+
     
     return (
         <div className="heading relative">
-            <div className="background absolute top-0 w-full h-full" ref={background} />
             <div className="heading-wrapper">
-                <div className="heading-headline ">
+                <div className="heading-headline" ref={backgroundTrigger} >
                     Joseph Xu
                     <div className="continue" >
                         <img alt="see more" src={arrow} />

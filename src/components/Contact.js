@@ -1,40 +1,37 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef} from 'react'
 import anime from "animejs"
-
 import "../styles/Contact.css"
 
 function Contact() {
 
-    const footerBackground = useRef();
+    const backgroundTrigger = useRef();
 
     useEffect(() => {
-        footerBackground.current.style.opacity = 0;
-        footerBackground.current.style.height = document.body.scrollHeight;
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > document.body.scrollHeight - window.outerHeight - 200) {
-                if (footerBackground.current.style.opacity < 1) {
-                    anime({
-                        targets: footerBackground.current,
-                        opacity: 1
-                    })
-                }
+        const io = new IntersectionObserver((entry) => {
+            const e = entry[0];
+            console.log(e.isIntersecting)
+            if (e.isIntersecting) {
+                anime({
+                    targets: document.body,
+                    background: "#FFD580",
+                    duration: 3000,
+                })
             } else {
-                if (footerBackground.current.style.opacity > 0) {
-                    anime({
-                        targets: footerBackground.current,
-                        opacity: 0
-                    })
-                }
+                anime({
+                    targets: document.body,
+                    background: "#FFF",
+                    duration: 3000,
+                })
             }
-        })
+        });
+        io.observe(backgroundTrigger.current)
     }, [])
 
     return (
         <div className="footer relative">
-            <div className="footer-background absolute bottom-0 w-full h-full" ref={footerBackground} />
             <div className="profile-wrapper">
                 <div className="profile ">
-                    <div className="footer-headline ">
+                    <div className="footer-headline " ref={backgroundTrigger} >
                         Say Hello!
                     </div>
                     <div className="footer-content " >

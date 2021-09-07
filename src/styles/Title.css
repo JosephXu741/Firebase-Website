@@ -2,17 +2,12 @@
     @apply  grid items-center min-h-screen min-w-full mb-10 md:mb-40;
 }
 
-.background {
-    background: rgb(112,112,187);
-    background: radial-gradient(circle, rgba(112,112,187,1) 0%, rgba(39,128,185,1) 100%);
-}
-
 .heading-wrapper {
     @apply mx-4 grid space-y-8 place-items-center z-10;
 }
 
 .heading-headline {
-    @apply font-sans text-7xl h-auto grid items-center;
+    @apply font-sans text-7xl h-auto grid items-center relative;
     @apply md:text-9xl;
     width: clamp(300px, 95%, 1400px);
 }
@@ -24,5 +19,5 @@
 }
 
 .continue {
-    @apply  w-12 h-12 justify-self-end absolute bottom-16;
+    @apply w-12 h-12 justify-self-start absolute top-48 sm:top-96;
 }
