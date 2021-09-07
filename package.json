@@ -11,6 +11,7 @@
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "animejs": "^3.2.1",
     "firebase": "^8.6.2",
     "framer-motion": "^4.1.17",
     "lottie-web": "^5.7.13",

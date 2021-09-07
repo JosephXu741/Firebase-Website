@@ -27,12 +27,14 @@ function ProjectCard(props) {
 
 
     return (
-        <div className={`p-card ${alternate ? "justify-end" : ""}`} >
+        <div 
+            className={`p-card ${alternate ? "justify-end" : ""}`} 
+            onMouseEnter={handleEnter}
+            onMouseLeave={handleLeave}
+        >
             <div  
                 className="display" 
                 id="structs"    
-                onMouseEnter={handleEnter}
-                onMouseLeave={handleLeave}
             >
             </div>
             <div className="p-textbox">
