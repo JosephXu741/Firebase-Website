@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from 'react'
 import "../styles/ProjectCard.css"
 import lottie from "lottie-web"
-import Animation from "../Animations/no-glass-20001-0030.mp4.lottie.json"
+import Animation from "../assets/no-glass-20001-0030.mp4.lottie.json"
 
 function ProjectCard(props) {
     const {alternate} = props;
