@@ -1,37 +1,15 @@
-import React, { useEffect, useRef} from 'react'
-import anime from "animejs"
+import React from 'react'
 import "../styles/Contact.css"
 
-function Contact() {
+function Contact(props) {
 
-    const backgroundTrigger = useRef();
-
-    useEffect(() => {
-        const io = new IntersectionObserver((entry) => {
-            const e = entry[0];
-            console.log(e.isIntersecting)
-            if (e.isIntersecting) {
-                anime({
-                    targets: document.body,
-                    background: "#FFD580",
-                    duration: 3000,
-                })
-            } else {
-                anime({
-                    targets: document.body,
-                    background: "#FFF",
-                    duration: 3000,
-                })
-            }
-        });
-        io.observe(backgroundTrigger.current)
-    }, [])
+    const {contactRef} = props
 
     return (
         <div className="footer relative">
             <div className="profile-wrapper">
                 <div className="profile ">
-                    <div className="footer-headline " ref={backgroundTrigger} >
+                    <div className="footer-headline" id="footerRef" ref={contactRef} >
                         Say Hello!
                     </div>
                     <div className="footer-content " >

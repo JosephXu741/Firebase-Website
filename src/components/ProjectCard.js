@@ -17,11 +17,11 @@ function ProjectCard(props) {
     }, [])
 
     const handleEnter = () => {
-        lottie.setDirection(1);
+        controls.current.setDirection(1);
         controls.current.play();
     }    
     const handleLeave = () => {
-        lottie.setDirection(-1);
+        controls.current.setDirection(-1);
         controls.current.play();
     }    
 

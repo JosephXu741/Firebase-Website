@@ -19,7 +19,7 @@
 
 .heading-wrapper {
     @apply mx-4 grid space-y-8 justify-self-center place-items-center z-10;
-    width: clamp(300px, 100%, 1800px);
+    width: clamp(300px, 95%, 1800px);
 }
 
 .heading-headline {
@@ -30,7 +30,7 @@
 .heading-content {
     @apply text-lg w-2/3 grid justify-self-start;
     @apply md:text-2xl;
-    width: clamp(300px, 100%, 600px);
+    width: clamp(300px, 95%, 600px);
 }
 
 .continue {

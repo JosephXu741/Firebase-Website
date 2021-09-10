@@ -1,55 +1,36 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import "../styles/Title.css"
 import arrow from "../assets/arrow-down-circle.svg"
-import anime from "animejs"
 import TitleRender from "./TitleRender"
 
-function Title() {  
+function Title(props) {  
 
-    const backgroundTrigger = useRef()
+    const {titleRef} = props;
     const titleRender = useRef()
+    const controls = useRef()
 
-    useEffect(() => {
-        const io = new IntersectionObserver((entry) => {
-            const e = entry[0];
-            console.log(e.isIntersecting)
-            if (e.isIntersecting) {
-                anime({
-                    targets: document.body,
-                    background: "#000",
-                    duration: 3000,
-                })
-                anime({
-                    targets: titleRender.current,
-                    opacity: 1,
-                    duration: 3000
-                })
-            } else {
-                anime({
-                    targets: document.body,
-                    background: "#FFF",
-                    duration: 3000,
-                })
-                anime({
-                    targets: titleRender.current,
-                    opacity: 0,
-                    duration: 3000
-                })
-            }
-        });
-        io.observe(backgroundTrigger.current)
-    }, [])
-
+    const handleEnter = () => {
+        controls.current.setDirection(1);
+        controls.current.play();
+    }    
+    const handleLeave = () => {
+        controls.current.setDirection(-1);
+        controls.current.play();
+    }    
     
     return (
         <div className="heading relative">
             <div className="moon w-1/2 aspect-w-10 aspect-h-4 bg-black absolute " ref={titleRender}>
-                <TitleRender />
+                <TitleRender controls={controls} />
             </div>
             <div className="heading-wrapper">
-                <div className="heading-headline text-white" ref={backgroundTrigger} >
+                <div className="heading-headline text-white" id="headingRef" ref={titleRef} >
                     Joseph Xu
-                    <div className="continue" >
+                    <div 
+                        className="continue" 
+                        onMouseEnter={handleEnter}
+                        onMouseLeave={handleLeave}
+                    >
                         <img alt="see more" src={arrow} />
                     </div>
                 </div>

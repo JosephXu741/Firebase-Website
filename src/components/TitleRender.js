@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 import lottie from "lottie-web"
 import Animation from "../assets/moon_only0001-0060.mp4.lottie.json"
 
-function TitleRender() {
-    const controls = useRef()
+function TitleRender(props) {
+    const { controls } = props
 
     useEffect(() => {
         controls.current = lottie.loadAnimation({
@@ -12,23 +12,12 @@ function TitleRender() {
             loop: false,
             autoplay: false,
         })
-    }, [])
+    })
 
-    const handleEnter = () => {
-        lottie.setDirection(1);
-        controls.current.play();
-    }    
-    const handleLeave = () => {
-        lottie.setDirection(-1);
-        controls.current.play();
-    }    
     return (
         <div
             id="moonBox"
-            onMouseEnter={handleEnter}
-            onMouseLeave={handleLeave}
         >
-            
         </div>
     )
 }
