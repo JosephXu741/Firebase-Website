@@ -1,5 +1,6 @@
 import React from 'react'
 import "../styles/Contact.css"
+import { SocialIcon } from 'react-social-icons';
 
 function Contact(props) {
 
@@ -10,14 +11,15 @@ function Contact(props) {
             <div className="profile-wrapper">
                 <div className="profile ">
                     <div className="footer-headline" id="footerRef" ref={contactRef} >
-                        Say Hello!
+                        Let's get in Contact!
                     </div>
                     <div className="footer-content " >
-                        joseph499@hotmail.com
+                        Joseph499@hotmail.com
                     </div>
                 </div>
-                <div className="icons-container">
-
+                <div className="icons-container flex space-x-8">
+                    <SocialIcon url="https://github.com/JosephXu741" target="_blank" rel="noopener noreferrer" />
+                    <SocialIcon url="https://www.linkedin.com/in/josephxu499/" target="_blank" rel="noopener noreferrer" />
                 </div>
             </div>
         </div>

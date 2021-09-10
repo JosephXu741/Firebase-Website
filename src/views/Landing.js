@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import "../styles/Landing.css"
 import anime from "animejs"
+import { projects_data } from "../store/projects"
 
 import ProjectCard from '../components/ProjectCard'
 import Title from '../components/Title'
@@ -11,7 +12,6 @@ function Landing() {
     const title = useRef();
     const contact = useRef();
     const refs = {"headingRef": false, "footerRef": false}
-
 
     useEffect(() => {
         const io = new IntersectionObserver((entries) => {
@@ -41,7 +41,9 @@ function Landing() {
             <div className="base ">
                 <Navbar />
                 <Title titleRef={title}/>
-                <ProjectCard />
+                {projects_data.map(proj => 
+                    <ProjectCard content={proj} />
+                )}
                 {/* <ProjectCard alternate={true}/>
                 <ProjectCard /> */}
                 <Contact contactRef={contact}/> 

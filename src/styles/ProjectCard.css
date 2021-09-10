@@ -41,5 +41,5 @@
 }
 
 .arrow:hover {
-    @apply transition duration-100 ease-in-out hover:bg-black transform hover:scale-110;
+    @apply transition duration-100 ease-in-out transform scale-150;
 }

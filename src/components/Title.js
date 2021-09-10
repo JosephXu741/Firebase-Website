@@ -17,6 +17,13 @@ function Title(props) {
         controls.current.setDirection(-1);
         controls.current.play();
     }    
+
+    const scrollProj = () => {
+        window.scrollTo({
+            top: window.innerHeight + 100,
+            behavior: "smooth"
+        })
+    }
     
     return (
         <div className="heading relative">
@@ -31,11 +38,11 @@ function Title(props) {
                         onMouseEnter={handleEnter}
                         onMouseLeave={handleLeave}
                     >
-                        <img alt="see more" src={arrow} />
+                        <img onClick={scrollProj} alt="see more" src={arrow} />
                     </div>
                 </div>
                 <div className="heading-content text-white w-1/2 " >
-                    A Final Year Computer Science Student at UNSW, driven by meaningful work
+                    A Penult Year Computer Science Student at UNSW, driven by meaningful work
                 </div>
             </div>
         </div>
