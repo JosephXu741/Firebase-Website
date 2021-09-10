@@ -23,7 +23,7 @@
 }
 
 .heading-headline {
-    @apply font-sans text-7xl h-auto grid justify-self-start relative;
+    @apply font-sans text-7xl h-auto grid justify-self-start;
     @apply md:text-9xl;
 }
 
@@ -34,5 +34,5 @@
 }
 
 .continue {
-    @apply w-12 h-12 justify-self-start absolute top-48 sm:top-72 lg:top-96;
+    @apply w-12 h-12 justify-self-start absolute left-8 bottom-12;
 }
