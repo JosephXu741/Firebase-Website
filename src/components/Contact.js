@@ -14,7 +14,7 @@ function Contact(props) {
                         Let's get in Contact!
                     </div>
                     <div className="footer-content " >
-                        Joseph499@hotmail.com
+                        Contact@josephx.dev
                     </div>
                 </div>
                 <div className="icons-container flex space-x-8">
