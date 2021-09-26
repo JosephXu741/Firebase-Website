@@ -1,0 +1,17 @@
+@import '../styles/display';
+
+.moon {
+    top: 50%;
+    right: 3%;
+    margin-top: -20%
+}
+
+@media (max-width: 1200px) {
+    .moon {
+        top: 30%;
+    }
+}
+
+.heading-content {
+    width: clamp(300px, 95%, 600px);
+}

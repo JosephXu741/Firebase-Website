@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
-import "../styles/Title.css"
-import arrow from "../assets/arrow-down-circle.svg"
-import TitleRender from "./TitleRender"
+import "./Title.scss"
+import arrow from "../../assets/arrow-down-circle.svg"
+import TitleRender from "../components/TitleRender"
 
 function Title(props) {  
 
@@ -26,22 +26,24 @@ function Title(props) {
     }
     
     return (
-        <div className="heading relative">
+        <div className="grid items-center min-h-screen min-w-full mb-10 md:mb-40 relative">
             <div className="moon w-1/2 aspect-w-10 aspect-h-4 bg-black absolute " ref={titleRender}>
                 <TitleRender controls={controls} />
             </div>
-            <div className="heading-wrapper">
-                <div className="heading-headline text-white" id="headingRef" ref={titleRef} >
+            <div className="titleClamp mx-4 grid space-y-8 justify-self-center place-items-center z-10">
+                <div className="heading-content font-sans text-7xl h-auto grid justify-self-start md:text-9xl text-white" 
+                        id="headingRef" ref={titleRef} 
+                    >
                     Joseph Xu
                     <div 
-                        className="continue" 
+                        className="w-12 h-12 justify-self-start absolute left-8 bottom-12" 
                         onMouseEnter={handleEnter}
                         onMouseLeave={handleLeave}
                     >
                         <img onClick={scrollProj} alt="see more" src={arrow} />
                     </div>
                 </div>
-                <div className="heading-content text-white w-1/2 " >
+                <div className="text-lg w-1/2 grid md:text-2xl justify-self-start text-white " >
                     A Penult Year Computer Science Student at UNSW, driven by meaningful work
                 </div>
             </div>

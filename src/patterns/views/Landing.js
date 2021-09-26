@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from 'react'
-import "../styles/Landing.css"
+import "./Landing.scss"
 import anime from "animejs"
-import { projects_data } from "../store/projects"
+import { projects_data } from "../../store/projects"
 
 import ProjectCard from '../components/ProjectCard'
-import Title from '../components/Title'
-import Contact from '../components/Contact'
-import Navbar from '../components/Navbar'
+import Title from '../blocks/Title'
+import Contact from '../blocks/Contact'
+import Navbar from '../partials/Navbar'
 
 function Landing() {
     const title = useRef();
@@ -38,7 +38,7 @@ function Landing() {
 
     return (
         <div>
-            <div className="base ">
+            <div className="h-auto grid justify-items-center z-50 ">
                 <Navbar />
                 <Title titleRef={title}/>
                 {projects_data.map(proj => 

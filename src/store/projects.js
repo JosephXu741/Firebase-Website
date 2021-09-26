@@ -6,4 +6,27 @@ const projects_data = [
     }
 ]
 
-export {projects_data}
+const more_projects_data = [
+    {
+        title: "MAC Hackathon",
+        body: "placeholder",
+        link: "/"
+    },
+    {
+        title: "MAC Hackathon",
+        body: "placeholder",
+        link: "/"
+    },
+    {
+        title: "MAC Hackathon",
+        body: "placeholder",
+        link: "/"
+    },
+    {
+        title: "MAC Hackathon",
+        body: "placeholder",
+        link: "/"
+    }
+]
+
+export {projects_data, more_projects_data}

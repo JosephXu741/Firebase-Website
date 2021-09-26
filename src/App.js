@@ -1,10 +1,21 @@
 import React from "react";
-import Landing from "./views/Landing.js"
+import {Route, Switch, BrowserRouter as Router} from "react-router-dom"
+import Landing from "./patterns/views/Landing.js"
+import MoreProjects from "./patterns/views/MoreProjects.js";
 
 
 function App() {
     return (
-        <Landing /> 
+        <Router>
+            <Switch>
+                <Route exact path="/more-projects">
+                    <MoreProjects />
+                </Route>
+                <Route path="/">
+                    <Landing /> 
+                </Route>
+            </Switch>
+        </Router>
     );
 }
 
