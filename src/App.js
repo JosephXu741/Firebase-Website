@@ -3,6 +3,8 @@ import {Route, Switch, BrowserRouter as Router} from "react-router-dom"
 import Landing from "./patterns/views/Landing.js"
 import MoreProjects from "./patterns/views/MoreProjects.js";
 
+import RevealButton from "./patterns/atoms/RevealButton.js";
+
 
 function App() {
     return (
@@ -10,6 +12,9 @@ function App() {
             <Switch>
                 <Route exact path="/more-projects">
                     <MoreProjects />
+                </Route>
+                <Route exact path="/test">
+                    <RevealButton/>
                 </Route>
                 <Route path="/">
                     <Landing /> 

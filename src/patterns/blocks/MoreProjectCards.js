@@ -5,9 +5,9 @@ import SimpleCard from "../components/SimpleCard"
 function MoreProjectCards(props) {
     const {cards} = props;
     return (
-        <div className="w-full flex flex-wrap justify-around bg-red-200">
+        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 bg-red-200">
             {cards.map(card => 
-                <SimpleCard data={card}/>
+                <SimpleCard key={card.id} data={card}/>
             )}
         </div>
     )

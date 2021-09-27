@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from 'react'
 import "./ProjectCard.scss"
 import lottie from "lottie-web"
 import Animation from "../../assets/no-glass-20001-0030.mp4.lottie.json"
-import arrow from "../../assets/corner-down-right.svg"
+// import RevealButton from '../atoms/RevealButton'
 
 function ProjectCard(props) {
     const {alternate, content} = props;
@@ -38,20 +38,14 @@ function ProjectCard(props) {
                 id="structs"    
             >
             </div>
-            <div className=" w-full z-10 h-1/2 flex md:items-center items-start justify-start md:w-1/2 md:h-full">
+            <div className="md:pl-12 w-full z-10 h-1/2 flex md:items-center items-start justify-start md:w-1/2 md:h-full">
 
                 <div className="p-4 grid z-10">
                     <div className=" text-6xl mb-12" > 
                         {content.title}
                     </div>
-                    <div className=" hidden sm:grid text-base md:text-lg md:mb-8" >
+                    <div className="hidden sm:grid text-base md:text-lg md:mb-8" >
                         {content.body}
-                    </div>
-                    
-                    <div className="w-12 h-12 justify-self-start">
-                        <a href={content.link}>
-                            <img src={arrow} alt="explore!" />
-                        </a>
                     </div>
                 </div>
             </div>

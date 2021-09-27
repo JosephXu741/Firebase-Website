@@ -10,22 +10,26 @@ const more_projects_data = [
     {
         title: "MAC Hackathon",
         body: "placeholder",
-        link: "/"
+        link: "/",
+        id: "1"
     },
     {
-        title: "MAC Hackathon",
+        title: "MAC Hckathon",
         body: "placeholder",
-        link: "/"
+        link: "/",
+        id: "2"
     },
     {
-        title: "MAC Hackathon",
+        title: "MC Hackathon",
         body: "placeholder",
-        link: "/"
+        link: "/",
+        id: "3"
     },
     {
-        title: "MAC Hackathon",
+        title: "MAC Hackathn",
         body: "placeholder",
-        link: "/"
+        link: "/",
+        id: "4"
     }
 ]
 

@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import "./Title.scss"
-import arrow from "../../assets/arrow-down-circle.svg"
 import TitleRender from "../components/TitleRender"
+import RevealButton from '../atoms/RevealButton';
 
 function Title(props) {  
 
@@ -36,11 +36,12 @@ function Title(props) {
                     >
                     Joseph Xu
                     <div 
-                        className="w-12 h-12 justify-self-start absolute left-8 bottom-12" 
+                        className="w-60 h-20 justify-self-start absolute left-8 bottom-12" 
                         onMouseEnter={handleEnter}
                         onMouseLeave={handleLeave}
+                        onClick={scrollProj}
                     >
-                        <img onClick={scrollProj} alt="see more" src={arrow} />
+                            <RevealButton />
                     </div>
                 </div>
                 <div className="text-lg w-1/2 grid md:text-2xl justify-self-start text-white " >
