@@ -8,26 +8,26 @@ const projects_data = [
 
 const more_projects_data = [
     {
-        title: "MAC Hackathon",
-        body: "placeholder",
+        title: "SYNC Hack 2021",
+        body: "Designed a skill-sharing based social media app. Implemented Animations frontend Functionality. Finalists.",
         link: "/",
         id: "1"
     },
     {
-        title: "MAC Hckathon",
-        body: "placeholder",
+        title: "MAC Hackathon 2021",
+        body: "Created a NLP which extracted ingredients from recipe lists. Created the ML model in TensorFlow and served to the frontend.",
         link: "/",
         id: "2"
     },
     {
-        title: "MC Hackathon",
-        body: "placeholder",
+        title: "180DC x COMM-STEM Case Comp 2021",
+        body: "Developed a technical solution to help education become more accessible to the disadvantaged. Finalists",
         link: "/",
         id: "3"
     },
     {
-        title: "MAC Hackathn",
-        body: "placeholder",
+        title: "CSE Hackathon Lite 2020",
+        body: "Implemented a COVID-19 tracker. Scraped NSW Government websites for information, and relayed to relavent subscribers with Twilio.",
         link: "/",
         id: "4"
     }
