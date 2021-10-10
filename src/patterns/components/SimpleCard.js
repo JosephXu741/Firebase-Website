@@ -42,7 +42,7 @@ function SimpleCard(props) {
                 {data.body}
             </div>
             <div ref={ref} className="opacity-0 absolute top-16 right-16">
-                <PinButton />
+                <PinButton color="#706Dff" />
             </div>
         </div>
     )

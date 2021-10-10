@@ -21,8 +21,8 @@ function Landing() {
             !refs.footerRef && !refs.headingRef ?
                 changeBackground("#FFF") :
             refs.footerRef && !refs.headingRef ?
-                changeBackground("#FF8252") :
-                changeBackground("#000")
+                changeBackground("#ff6060") :
+                changeBackground("#ebebeb")
         });
         io.observe(title.current)
         io.observe(contact.current)

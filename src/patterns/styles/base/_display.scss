@@ -1,0 +1,23 @@
+.contentClamp {
+    width: clamp(300px, 95%, 1400px);
+}
+
+.noMarginContentClamp {
+    width: clamp(300px, 100%, 1400px);
+}
+
+.halfContentClamp {
+    width: clamp(350px, 95%, 700px);
+}
+
+.contentHeightClamp {
+    height: clamp(150px, 50vw, 700px);
+}
+
+.halfTitleClamp {
+    width: clamp(150px, 95%, 900px);
+}
+
+.titleClamp {
+    width: clamp(300px, 95%, 1800px);
+}

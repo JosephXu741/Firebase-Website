@@ -27,26 +27,29 @@ function Title(props) {
     
     return (
         <div className="grid items-center min-h-screen min-w-full mb-10 md:mb-40 relative">
-            <div className="moon w-1/2 aspect-w-10 aspect-h-4 bg-black absolute " ref={titleRender}>
+            <div className="moon w-screen absolute top-0" ref={titleRender}>
                 <TitleRender controls={controls} />
             </div>
-            <div className="titleClamp mx-4 grid space-y-8 justify-self-center place-items-center z-10">
-                <div className="heading-content font-sans text-7xl h-auto grid justify-self-start md:text-9xl text-white" 
+            <div className="titleClamp flex h-full relative space-y-8 justify-self-center items-center z-10">
+                <div className="heading-content block h-auto justify-self-start" 
                         id="headingRef" ref={titleRef} 
                     >
-                    Joseph Xu
+                    <span className="main-text text-7xl md:text-9xl text-black">
+                        Joseph Xu
+                    </span>
+                    <span className="body-text mt-8 text-lg grid md:text-2xl justify-self-start text-black ">
+                        A Penult Year Computer Science Student at UNSW, driven by meaningful work
+                    </span>
                     <div 
-                        className="w-60 h-20 justify-self-start absolute left-8 bottom-12" 
+                        className="w-60 h-20 justify-self-start absolute left-2 bottom-12" 
                         onMouseEnter={handleEnter}
                         onMouseLeave={handleLeave}
                         onClick={scrollProj}
                     >
-                            <RevealButton />
+                            <RevealButton color="#706DFF" />
                     </div>
                 </div>
-                <div className="text-lg w-1/2 grid md:text-2xl justify-self-start text-white " >
-                    A Penult Year Computer Science Student at UNSW, driven by meaningful work
-                </div>
+
             </div>
         </div>
     )

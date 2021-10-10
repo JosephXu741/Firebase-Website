@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import lottie from "lottie-web"
-import Animation from "../../assets/moon_only0001-0060.mp4.lottie.json"
+import Animation from "../../assets/logo.json"
 import "./TitleRender.scss"
 
 function TitleRender(props) {
@@ -9,6 +9,7 @@ function TitleRender(props) {
     useEffect(() => {
         controls.current = lottie.loadAnimation({
             container: document.querySelector("#moonBox"),
+            renderer: 'svg',
             animationData: Animation,
             loop: false,
             autoplay: false,
