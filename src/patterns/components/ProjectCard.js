@@ -74,7 +74,7 @@ function ProjectCard(props) {
                             {content.body}
                         </div>
                         <div ref={pin}>
-                            <PinButton rotation="45" color="#FF6060" />
+                            <div className=" w-12 h-12 transform -rotate-45"><PinButton color="#FF6060" /></div>
                         </div>
                     </div>
                 </div>

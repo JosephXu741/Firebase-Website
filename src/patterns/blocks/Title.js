@@ -39,17 +39,14 @@ function Title(props) {
                     <span className="body-text mt-8 text-lg grid md:text-2xl justify-self-start text-black ">
                         A Penult Year Computer Science Student at UNSW, driven by meaningful work
                     </span>
-                    <div 
-                        className="w-60 h-20 justify-self-start absolute left-2 bottom-12" 
-                        onMouseEnter={handleEnter}
-                        onMouseLeave={handleLeave}
-                        onClick={scrollProj}
-                    >
-                            <RevealButton color="#706DFF" />
-                    </div>
                 </div>
 
             </div>
+            <div
+                className="absolute w-1/2 h-full right-0 background-red-200 z-40"
+                onMouseEnter={handleEnter}
+                onMouseLeave={handleLeave}
+            />
         </div>
     )
 }
