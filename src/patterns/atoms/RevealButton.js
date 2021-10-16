@@ -1,6 +1,5 @@
 import React, {useEffect, useRef} from 'react'
 import anime from "animejs"
-import "./RevealButton.scss"
 
 function RevealButton(props) {
     const {rotation, color} = props

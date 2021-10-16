@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react'
-import "./Landing.scss"
 import anime from "animejs"
 import { projects_data } from "../../store/projects"
 

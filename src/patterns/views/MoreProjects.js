@@ -2,7 +2,6 @@ import React from 'react'
 import Navbar from "../partials/Navbar"
 import PageBanner from "../blocks/PageBanner"
 import MoreProjectCards from '../blocks/MoreProjectCards'
-import "./MoreProjects.scss"
 import {more_projects_data} from "../../store/projects"
 
 function MoreProjects() {

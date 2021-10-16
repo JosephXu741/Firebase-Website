@@ -1,5 +1,4 @@
 import React, {useEffect, useRef} from 'react'
-import "./ProjectCard.scss"
 import lottie from "lottie-web"
 import anime from "animejs"
 import Animation from "../../assets/structs.json"

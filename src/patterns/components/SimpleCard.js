@@ -1,6 +1,5 @@
 import React, {useEffect, useRef} from 'react'
 import PinButton from '../atoms/PinButton';
-import "./SimpleCard.scss"
 import anime from "animejs"
 
 function SimpleCard(props) {

@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import lottie from "lottie-web"
 import Animation from "../../assets/logo.json"
-import "./TitleRender.scss"
 
 function TitleRender(props) {
     const { controls } = props

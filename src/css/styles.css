@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap");
+#explore {
+  opacity: 0;
+}
+
+.profile {
+  width: clamp(150px, 100%, 700px);
+}
+
+.profile-wrapper {
+  width: clamp(300px, 100%, 1400px);
+}
+
+.icons-container {
+  width: clamp(150px, 100%, 700px);
+}
+
+.heading-content {
+  width: clamp(300px, 95%, 600px);
+}
+
+.simple-card {
+  height: 450px;
+}
+
+.nav {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contentClamp {
+  width: clamp(300px, 95%, 1400px);
+}
+
+.noMarginContentClamp {
+  width: clamp(300px, 100%, 1400px);
+}
+
+.halfContentClamp {
+  width: clamp(350px, 95%, 700px);
+}
+
+.contentHeightClamp {
+  height: clamp(150px, 50vw, 700px);
+}
+
+.halfTitleClamp {
+  width: clamp(150px, 95%, 900px);
+}
+
+.titleClamp {
+  width: clamp(300px, 95%, 1800px);
+}
+
+.main-text {
+  font-family: "Roboto-slab", serif;
+}
+
+.body-text {
+  font-family: "Roboto", sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

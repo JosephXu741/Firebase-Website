@@ -1,5 +1,4 @@
 import React from 'react'
-import "./PageBanner.scss"
 
 function PageBanner(props) {
     const {title} = props;

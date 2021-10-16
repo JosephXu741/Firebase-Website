@@ -1,5 +1,4 @@
 import React, { useRef } from 'react'
-import "./Title.scss"
 import TitleRender from "../components/TitleRender"
 import RevealButton from '../atoms/RevealButton';
 

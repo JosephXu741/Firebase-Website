@@ -1,5 +1,4 @@
 import React from 'react'
-import "./MoreProjectCards.scss"
 import SimpleCard from "../components/SimpleCard"
 
 function MoreProjectCards(props) {

@@ -1,5 +1,4 @@
 import React from 'react'
-import "./Contact.scss"
 import { SocialIcon } from 'react-social-icons';
 
 function Contact(props) {
