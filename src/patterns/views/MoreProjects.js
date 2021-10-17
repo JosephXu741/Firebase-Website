@@ -10,7 +10,7 @@ function MoreProjects() {
         <div className="grid w-screen place-items-center">
             <div className="contentClamp">
                 <Navbar />
-                <PageBanner title={"Other Projects"}/>
+                <PageBanner title={"Other Endeavours"}/>
                 <MoreProjectCards cards={more_projects_data} />
 
             </div>

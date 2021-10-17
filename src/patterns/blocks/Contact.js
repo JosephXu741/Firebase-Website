@@ -9,11 +9,11 @@ function Contact(props) {
         <div className="grid place-items-center min-h-screen min-w-full mt-10 md:mt-40 relative">
             <div className="titleClamp mx-4 relative h-full grid justify-items-start items-center">
                 <div className="2xl:absolute 2xl:right-1/2 grid place-items-center ">
-                    <div className="font-sans text-7xl h-auto grid items-center mb-16 md:text-9xl" 
+                    <div className="main-text text-7xl h-auto grid items-center mb-16 md:text-9xl" 
                         >
                         Let's get in Contact!
                     </div>
-                    <div className="justify-self-start text-lg mb-16 md:text-2xl " >
+                    <div className="body-text justify-self-start text-lg mb-16 md:text-2xl " >
                         Contact@josephx.dev
                     </div>
                 </div>

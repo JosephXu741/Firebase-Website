@@ -6,6 +6,7 @@ import ProjectCard from '../components/ProjectCard'
 import Title from '../blocks/Title'
 import Contact from '../blocks/Contact'
 import Navbar from '../partials/Navbar'
+import MoreProjectsButton from '../atoms/MoreProjectsButton'
 
 function Landing() {
     const title = useRef();
@@ -45,6 +46,7 @@ function Landing() {
                 )}
                 {/* <ProjectCard alternate={true}/>
                 <ProjectCard /> */}
+                <MoreProjectsButton />
                 <Contact contactRef={contact}/> 
             </div>
         </div>

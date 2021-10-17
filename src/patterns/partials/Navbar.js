@@ -19,12 +19,12 @@ function Navbar() {
                 </Link>
             </div>
             <div onClick={scrollTop} className="flex flex-row-reverse space-x-4 space-x-reverse self-center">
-                <div>
+                <div className="body-text">
                     <Link to="/">
                         Projects
                     </Link>
                 </div>
-                <div>
+                <div className="body-text">
                     <Link to="/more-projects">
                         More Projects
                     </Link>

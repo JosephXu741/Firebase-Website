@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import TitleRender from "../components/TitleRender"
-import RevealButton from '../atoms/RevealButton';
 
 function Title(props) {  
 
@@ -16,13 +15,6 @@ function Title(props) {
         controls.current.setDirection(-1);
         controls.current.play();
     }    
-
-    const scrollProj = () => {
-        window.scrollTo({
-            top: window.innerHeight + 100,
-            behavior: "smooth"
-        })
-    }
     
     return (
         <div className="grid items-center min-h-screen min-w-full mb-10 md:mb-40 relative">

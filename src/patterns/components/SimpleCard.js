@@ -34,10 +34,10 @@ function SimpleCard(props) {
 
     return (
         <div ref={card} className="simple-card p-12 grid relative bg-blue-200 transition-shadow hover:shadow-xl" >
-            <div className="text-4xl self-end">
+            <div className="body-text text-4xl self-end">
                 {data.title}
             </div>
-            <div className="text-md mt-4">
+            <div className="body-text text-md mt-4">
                 {data.body}
             </div>
             <div ref={ref} className="opacity-0 absolute top-16 right-16">
