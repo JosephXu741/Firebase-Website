@@ -1,4 +1,20 @@
 .nav { 
     left: 50%;
     transform: translateX(-50%);
+
+    a {
+        transition: 0.3s;
+        transition-timing-function: ease-in-out;
+    }
+
+    a:hover {
+        color: #ff6060;
+    }
 }
+
+.selected {
+    text-decoration-line: underline;
+    text-decoration-color: #ff6060;
+    text-decoration-thickness: 0.15rem;
+}
+

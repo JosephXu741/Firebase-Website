@@ -41,7 +41,7 @@ function SimpleCard(props) {
                 {data.body}
             </div>
             <div ref={ref} className="opacity-0 absolute top-16 right-16">
-                <PinButton color="#706Dff" />
+                <div className="transform -rotate-90 w-12 h-12" ><PinButton color="#706Dff" /></div>
             </div>
         </div>
     )

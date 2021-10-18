@@ -1,0 +1,12 @@
+
+@media (max-width: 768px) {
+    .projectCardWrapper {
+        height: clamp(150px, 95vw, 100vw);
+    }
+}
+
+@media (min-width: 768px) {
+    .projectCardWrapper {
+        height: clamp(150px, 50vw, 700px);
+    }
+}

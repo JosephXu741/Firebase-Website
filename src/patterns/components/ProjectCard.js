@@ -3,6 +3,7 @@ import lottie from "lottie-web"
 import anime from "animejs"
 import Animation from "../../assets/structs.json"
 import PinButton from "../atoms/PinButton"
+import {openInNewTab} from "../../helpers/helpers"
 
 function ProjectCard(props) {
     const {alternate, content} = props;
@@ -54,33 +55,32 @@ function ProjectCard(props) {
     return (
         <div 
             ref={projectDiv}
-            className={` contentClamp contentHeightClamp grid place-items-center flex-wrap my-10 ${alternate ? "justify-end" : ""}`} 
+            className={`contentClamp projectCardWrapper grid place-items-center relative flex-wrap my-10 ${alternate ? "justify-end" : ""}`} 
             onMouseEnter={handleEnter}
             onMouseLeave={handleLeave}
         >
-            <a href="https://structs.netlify.app/">
-                <div  
-                    className="contentClamp items-center md:absolute z-10" 
-                    id="structs"    
-                >
-                </div>
-                <div className="lg:pl-12 w-full z-10 h-1/2 flex md:items-center items-start justify-start justify-self-start md:w-1/2 md:h-full">
-
-                    <div className="p-4 grid z-10">
-                        <div className="main-text text-6xl mb-4 text-white" > 
-                            {content.title}
-                        </div>
-                        <div className="body-text hidden sm:grid text-base md:text-lg mb-8 text-white" >
-                            {content.body}
-                        </div>
-                        <div ref={pin}>
-                            <div className=" w-12 h-12 transform -rotate-45"><PinButton color="#FF6060" /></div>
-                        </div>
+            <div  
+                className="items-center absolute top-0 left-0 w-full z-10" 
+                id="structs"   
+                onClick={() => openInNewTab('https://structs.netlify.app/')} 
+            >
+            </div>
+            <div className="lg:pl-12 w-full z-10 h-1/2 flex md:items-center items-start self-end justify-start justify-self-start md:w-1/2 md:h-full">
+                <div className="p-4 grid z-10">
+                    <div className="main-text text-6xl mb-4 md:text-white text-black" > 
+                        {content.title}
+                    </div>
+                    <div className="body-text hidden sm:grid text-base md:text-lg mb-8 md:text-white text-black" >
+                        {content.body}
+                    </div>
+                    <div ref={pin}>
+                        <div className=" w-12 h-12 transform -rotate-45"><PinButton color="#FF6060" /></div>
                     </div>
                 </div>
-            </a>
+            </div>
         </div>
     )
 }
 
 export default ProjectCard
+

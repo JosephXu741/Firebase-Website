@@ -1,33 +1,21 @@
 import React from 'react'
-import {Link} from "react-router-dom"
+import {NavLink} from "react-router-dom"
 import Logo from "../../assets/Logo.svg"
 
 function Navbar() {
 
-    const scrollTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' 
-        })
-    }
-
     return (
         <div className="nav titleClamp fixed h-16 z-50 top-0 flex justify-between text-xl">
-            <div onClick={scrollTop} className="flex self-center">
-                <Link to="/">
+            <div className="flex self-center">
+                <NavLink to="/">
                     <img className="w-16 h-16" alt="JX" src={Logo} />
-                </Link>
+                </NavLink>
             </div>
-            <div onClick={scrollTop} className="flex flex-row-reverse space-x-4 space-x-reverse self-center">
-                <div className="body-text">
-                    <Link to="/">
-                        Projects
-                    </Link>
-                </div>
-                <div className="body-text">
-                    <Link to="/more-projects">
-                        More Projects
-                    </Link>
+            <div className="flex flex-row-reverse h-full space-x-4 space-x-reverse self-center">
+                <div className="body-text place-self-center grid p-4">
+                    <NavLink to="/more-projects" activeClassName="selected">
+                        Other Projects
+                    </NavLink>
                 </div>
             </div>
         </div>

@@ -22,7 +22,7 @@ function Landing() {
                 changeBackground("#FFF") :
             refs.footerRef && !refs.headingRef ?
                 changeBackground("#ff6060") :
-                changeBackground("#ebebeb")
+                changeBackground("#eaeaea")
         });
         io.observe(title.current)
         io.observe(contact.current)
@@ -32,12 +32,13 @@ function Landing() {
         anime({
             targets: document.body,
             background: color,
-            duration: 3000
+            duration: 500,
+            easing: "linear"
         })
     }
 
     return (
-        <div>
+        <div className="Landing">
             <div className="h-auto grid justify-items-center z-50 ">
                 <Navbar />
                 <Title titleRef={title}/>

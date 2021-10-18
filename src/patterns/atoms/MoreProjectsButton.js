@@ -47,7 +47,7 @@ function MoreProjectsButton() {
 
     return (
         <Link to="/more-projects">
-            <div className="moreProjectsButton grid relative mt-16 text-2xl body-text border-2 border-black" ref={moreProjButton}>
+            <div className="moreProjectsButton grid relative text-2xl body-text border-2 border-black" ref={moreProjButton}>
                 <div className="grid place-content-center w-full h-full">
                     Other Projects
                 </div>

@@ -29,6 +29,16 @@
   width: clamp(300px, 95%, 650px);
 }
 
+@media (max-width: 768px) {
+  .projectCardWrapper {
+    height: clamp(150px, 95vw, 100vw);
+  }
+}
+@media (min-width: 768px) {
+  .projectCardWrapper {
+    height: clamp(150px, 50vw, 700px);
+  }
+}
 .simple-card {
   height: 450px;
 }
@@ -36,6 +46,19 @@
 .nav {
   left: 50%;
   transform: translateX(-50%);
+}
+.nav a {
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.nav a:hover {
+  color: #ff6060;
+}
+
+.selected {
+  text-decoration-line: underline;
+  text-decoration-color: #ff6060;
+  text-decoration-thickness: 0.15rem;
 }
 
 .contentClamp {
@@ -73,3 +96,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body::before {
+  background-color: #eaeaea;
+}
+
+.Landing::before {
+  background-color: #eaeaea;
+}
