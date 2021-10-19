@@ -26,7 +26,7 @@
 }
 
 .heading-content {
-  width: clamp(300px, 95%, 650px);
+  width: clamp(300px, 95%, 600px);
 }
 
 @media (max-width: 768px) {
@@ -39,10 +39,19 @@
     height: clamp(150px, 50vw, 700px);
   }
 }
+.responsiveColor {
+  @apply md:text-white text-black;
+}
+
 .simple-card {
   height: 450px;
 }
 
+@media (max-width: 968px) and (min-width: 768px) {
+  .projList li {
+    font-size: 12px;
+  }
+}
 .nav {
   left: 50%;
   transform: translateX(-50%);

@@ -10,3 +10,7 @@
         height: clamp(150px, 50vw, 700px);
     }
 }
+
+.responsiveColor {
+    @apply md:text-white text-black;
+}

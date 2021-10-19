@@ -1,8 +1,9 @@
-import React, {useEffect, useRef} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import lottie from "lottie-web"
 import anime from "animejs"
 import Animation from "../../assets/structs.json"
 import PinButton from "../atoms/PinButton"
+// import ProjectList from './ProjectList'
 import {openInNewTab} from "../../helpers/helpers"
 
 function ProjectCard(props) {
@@ -10,6 +11,8 @@ function ProjectCard(props) {
     const controls = useRef()
     const pin = useRef()
     const projectDiv = useRef()
+
+    const [flipped, setFlipped] = useState(1)
 
     useEffect(() => {
         const container = document.querySelector("#structs")
@@ -21,26 +24,46 @@ function ProjectCard(props) {
             autoplay: false,
         })
 
-        projectDiv.current.addEventListener("mouseenter", () => {
+        pin.current.addEventListener("mouseenter", () => {
+            console.log(flipped)
             anime.remove(pin.current)
             anime({
                 targets: pin.current,
-                translateX: 30,
-                duration: 100,
-                easing: "spring"
+                translateX: `-=${10 * flipped}`,
+                duration: 500,
+                easing: 'easeOutQuint'
             })
         })
-        projectDiv.current.addEventListener("mouseleave", () => {
+        pin.current.addEventListener("mouseleave", () => {
             anime.remove(pin.current)
             anime({
                 targets: pin.current,
-                translateX: 0,
-                duration: 300,
+                translateX: `+=${10 * flipped}`,
+                duration: 50,
                 easing: "linear"
             })
         })
 
-    }, [])
+        // pin.current.addEventListener("click", () => {
+        //     anime.remove(pin.current)
+        //     if (flipped) {
+        //         anime({
+        //             targets: pin.current,
+        //             translateX: 0,
+        //             duration: 100,
+        //             easing: "linear"
+        //         })
+        //     } else {
+        //         anime({
+        //             targets: pin.current,
+        //             translateX: 200,
+        //             duration: 100,
+        //             easing: "linear"
+        //         })
+        //     }
+        // })
+
+    }, [flipped])
 
     const handleEnter = () => {
         controls.current.setDirection(1);
@@ -65,18 +88,22 @@ function ProjectCard(props) {
                 onClick={() => openInNewTab('https://structs.netlify.app/')} 
             >
             </div>
-            <div className="lg:pl-12 w-full z-10 h-1/2 flex md:items-center items-start self-end justify-start justify-self-start md:w-1/2 md:h-full">
+            <div className="lg:pl-12 p-4 w-full z-10 h-1/2 flex relative md:items-center items-start self-end justify-start justify-self-start md:w-1/2 md:h-full">
                 <div className="p-4 grid z-10">
-                    <div className="main-text text-6xl mb-4 md:text-white text-black" > 
+                    <div className="main-text text-6xl mb-4 responsiveColor" > 
                         {content.title}
                     </div>
-                    <div className="body-text hidden sm:grid text-base md:text-lg mb-8 md:text-white text-black" >
+                    <div className="body-text hidden sm:grid text-base md:text-lg mb-8 responsiveColor" >
                         {content.body}
                     </div>
-                    <div ref={pin}>
-                        <div className=" w-12 h-12 transform -rotate-45"><PinButton color="#FF6060" /></div>
-                    </div>
                 </div>
+                {/* <ProjectList content={content.description} /> */}
+                <div className="absolute bottom-10 flex p-4">
+                    <div className="w-12 h-12" ref={pin} onClick={() => setFlipped(!flipped)}>
+                        <div className="transform -rotate-45"><PinButton color="#FF6060" /></div>
+                    </div>
+                    <div className="responsiveColor text-base md:text-lg ml-4 grid place-self-center">Visit Site</div>
+                </div> 
             </div>
         </div>
     )

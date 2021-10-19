@@ -2,7 +2,14 @@ const projects_data = [
     {
         title: "Structs.sh",
         body: "Originated through the idea of making data structures and algorithms more accessible to students, Structs attempts to break this barrier by introducing a new way of teaching one of the most essential concepts in Computer Science",
-        link: "https://structs.netlify.app/"
+        link: "https://structs.netlify.app/",
+        description: [
+            "Extended the database into the three main versions of the server, residing in the HTTP",
+            "Did extensive testing on the functionality and believeability of the website",
+            "Developed a ground breaking method for ping extraction which consisted of turning off your website",
+            "Created many different categroties of pages to offer extended feedback",
+            "Did on in a million opportunity to establish a connection with the formula of Shore's algorithm, resulted in the success of the site"
+        ]
     }
 ]
 
