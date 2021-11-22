@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import anime from "animejs"
+import {Link} from 'react-router-dom'
 import { projects_data } from "../../store/projects"
-
 import ProjectCard from '../components/ProjectCard'
 import Title from '../blocks/Title'
 import Contact from '../blocks/Contact'
@@ -47,7 +47,11 @@ function Landing() {
                 )}
                 {/* <ProjectCard alternate={true}/>
                 <ProjectCard /> */}
-                <SwipeButton text="More Projects" />
+                <Link to="/more-projects">
+                    <div className="w-48">
+                        <SwipeButton text="More Projects" />
+                    </div>
+                </Link>
                 <Contact contactRef={contact}/> 
             </div>
         </div>

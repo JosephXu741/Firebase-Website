@@ -15,16 +15,6 @@
   width: clamp(150px, 100%, 700px);
 }
 
-.moreProjectsButton {
-  width: 192;
-  height: 70;
-}
-
-.moreProjectsPin {
-  opacity: 0;
-  left: 0;
-}
-
 .heading-content {
   width: clamp(300px, 95%, 600px);
 }

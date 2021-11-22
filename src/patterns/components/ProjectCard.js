@@ -45,22 +45,27 @@ function ProjectCard(props) {
             >
             </div>
             <div className="lg:pl-12 w-full z-10 h-1/2 flex relative md:items-center items-start self-end justify-start justify-self-start md:w-1/2 md:h-full">
-                <div className="p-4 grid z-10">
+                <div className="p-4 mb-4 grid z-10">
                     <div className="main-text text-6xl mb-4 responsiveColor" > 
                         {content.title}
                     </div>
-                    <div className="body-text hidden sm:grid text-base md:text-lg mb-8 responsiveColor" >
+                    <div className="body-text hidden sm:grid text-base md:text-lg mb-4 responsiveColor" >
                         {content.body}
                     </div>
-                    <div 
-                        className="responsiveColor w-full h-20 text-base md:text-lg grid place-items-center pr-8"
+                    <button
+                        className="responsiveColor w-36 text-base md:text-lg sm:grid place-items-center pr-8 hidden "
                         onClick={() => openInNewTab('https://structs.netlify.app/')} 
                     >
                         <SwipeButton text="Visit Site!" />
-                    </div>
+                    </button>
                 </div>
-                <div className="absolute bottom-0 left-0 lg:bottom-12 lg:left-12 w-20 h-20 flex">
-                    <ExpandAnimation text="Find out more!" />
+                <div className="absolute md:right-0 bottom-6 lg:bottom-12 lg:left-12 flex z-30">
+                    <div className="w-20 h-20">
+                        <ExpandAnimation />
+                    </div>
+                    <span className="place-self-center responsiveColor">
+                        Find out more!
+                    </span>
                 </div> 
             </div>
         </div>
