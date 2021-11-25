@@ -19,6 +19,10 @@
   width: clamp(300px, 95%, 600px);
 }
 
+.detailTitle {
+  height: 60vh;
+}
+
 @media (max-width: 768px) {
   .projectCardWrapper {
     height: clamp(150px, 95vw, 100vw);
@@ -62,6 +66,10 @@
 
 .contentClamp {
   width: clamp(300px, 95%, 1400px);
+}
+
+.projectContentClamp {
+  width: clamp(300px, 95%, 700px);
 }
 
 .noMarginContentClamp {

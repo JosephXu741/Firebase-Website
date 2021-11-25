@@ -2,6 +2,10 @@
     width: clamp(300px, 95%, 1400px);
 }
 
+.projectContentClamp {
+    width: clamp(300px, 95%, 700px);
+}
+
 .noMarginContentClamp {
     width: clamp(300px, 100%, 1400px);
 }
