@@ -1,12 +1,11 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef} from 'react'
 import anime from "animejs"
 import {Link} from 'react-router-dom'
-import { projects_data } from "../../store/projects"
-import ProjectCard from '../components/ProjectCard'
 import Title from '../blocks/Title'
 import Contact from '../blocks/Contact'
 import Navbar from '../partials/Navbar'
 import SwipeButton from '../atoms/SwipeButton'
+import ProjectCardsWrapper from '../blocks/ProjectCardsWrapper'
 
 function Landing() {
     const title = useRef();
@@ -42,11 +41,7 @@ function Landing() {
             <div className="h-auto grid justify-items-center z-50 ">
                 <Navbar />
                 <Title titleRef={title}/>
-                {projects_data.map(proj => 
-                    <ProjectCard content={proj} />
-                )}
-                {/* <ProjectCard alternate={true}/>
-                <ProjectCard /> */}
+                <ProjectCardsWrapper />
                 <Link to="/more-projects">
                     <div className="w-48">
                         <SwipeButton text="More Projects" />

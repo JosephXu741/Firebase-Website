@@ -1,15 +1,16 @@
 import React from 'react'
-import PageBanner from './PageBanner'
 
-function ProjectDetailTitle() {
+function ProjectDetailTitle(props) {
+    const {content} = props
+
     return (
         <div className="detailTitle contentClamp flex justify-items-center bg-blue-200 ">
             <div className="w-1/2 h-full grid bg-red-100 p-16">
                 <h1 className="text-9xl self-end">
-                    Hello
+                    {content?.title}
                 </h1>
                 <p className="text-3xl self-center">
-                    This was a visualisation project for students
+                    {content?.brief}
                 </p>
             </div>
             <div className="w-1/2 h-full grid place-items-center bg-green-100 text-9xl">

@@ -12,15 +12,9 @@ function App() {
         <Router>
             <ScrollToTop />
             <Switch>
-                <Route exact path="/more-projects">
-                    <MoreProjects />
-                </Route>
-                <Route exact path="/test">
-                    <ProjectDetail />
-                </Route>
-                <Route path="/">
-                    <Landing /> 
-                </Route>
+                <Route exact path="/more-projects" component={MoreProjects} />
+                <Route exact path="/:id" component={ProjectDetail} />
+                <Route path="/" component={Landing} />
             </Switch>
         </Router>
     );

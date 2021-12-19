@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from "../partials/Navbar"
 import PageBanner from "../blocks/PageBanner"
 import MoreProjectCards from '../blocks/MoreProjectCards'
-import {more_projects_data} from "../../store/projects"
+import {more_projects_data} from "../../store/context"
 
 function MoreProjects() {
 
@@ -12,7 +12,6 @@ function MoreProjects() {
                 <Navbar />
                 <PageBanner title={"Other Endeavours"}/>
                 <MoreProjectCards cards={more_projects_data} />
-
             </div>
         </div>
     )

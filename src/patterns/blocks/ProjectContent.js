@@ -1,14 +1,27 @@
 import React from 'react'
 
-function ProjectContent() {
+function ProjectContent(props) {
+    const {content} = props
+
+
     return (
         <div className="grid place-items-center w-full">
-            <div className="projectContentClamp bg-gray-100">
-                hello
-            </div>
-            <div className="contentClamp bg-blue-500 h-96">
-
-            </div>
+            {
+                content?.blocks.map(block => {
+                    if (block.type === "textBlock") {
+                        return <div className="projectContentClamp">{block.data}</div>
+                    }
+                    else if (block.type === "divider") {
+                        return <div className="" >***</div>
+                    }
+                    else if (block.type === "image") {
+                        return <div className="contentClamp"><img className="" alt={block.type} src={block.data} /></div>
+                    }
+                    else {
+                        return <div></div>
+                    }
+                })
+            }
         </div>
     )
 }
