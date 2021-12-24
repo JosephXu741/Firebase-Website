@@ -13,7 +13,7 @@ function ProjectCardsWrapper() {
     }, [])
 
     return (
-        <div className="h-auto grid justify-items-center">
+        <div className="h-auto min-w-full grid justify-items-center">
             {projects.map(proj => 
                 <ProjectCard content={proj} />
             )}

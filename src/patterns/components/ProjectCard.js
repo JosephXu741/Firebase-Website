@@ -50,11 +50,11 @@ function ProjectCard(props) {
                         {content.title}
                     </div>
                     <div className="body-text hidden sm:grid text-base md:text-lg mb-4 responsiveColor" >
-                        {content.body}
+                        {content.abstract} 
                     </div>
                     <button
                         className="responsiveColor w-36 text-base md:text-lg sm:grid place-items-center pr-8 hidden "
-                        onClick={() => openInNewTab('https://structs.netlify.app/')} 
+                        onClick={() => openInNewTab(content.link)} 
                     >
                         <SwipeButton text="Visit Site!" />
                     </button>
