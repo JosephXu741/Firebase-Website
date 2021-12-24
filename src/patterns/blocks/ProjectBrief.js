@@ -4,7 +4,8 @@ function ProjectBrief(props) {
     const {content} = props
 
     return (
-        <div className="grid contentClamp grid-cols-2 bg-purple-100 px-16 py-8">
+        <div className="grid contentClamp place-items-center bg-purple-100 py-8">
+            <div className="grid projectContentClamp grid-cols-2">
             {
             content?.experience.map(exp => (
                 <div className="mb-12">
@@ -19,6 +20,7 @@ function ProjectBrief(props) {
                 </div>
             ))
             }
+            </div>
         </div>
     )
 }
