@@ -4,12 +4,14 @@ import Animation from "../../assets/structs.json"
 import {openInNewTab} from "../../helpers/helpers"
 import ExpandAnimation from './ExpandAnimation'
 import SwipeButton from '../atoms/SwipeButton'
-import { NavLink } from 'react-router-dom'
+import ExpandButtonWrapper from '../atoms/ExpandButtonWrapper'
+import {useHistory} from 'react-router-dom'
 
 function ProjectCard(props) {
     const {alternate, content} = props;
     const controls = useRef()
     const projectDiv = useRef()
+    let history = useHistory()
 
     useEffect(() => {
         const container = document.querySelector("#structs")
@@ -30,7 +32,7 @@ function ProjectCard(props) {
     const handleLeave = () => {
         controls.current.setDirection(-1);
         controls.current.play();
-    }    
+    }  
 
 
     return (
@@ -61,11 +63,18 @@ function ProjectCard(props) {
                     </button>
                 </div>
                 <div className="absolute md:right-0 bottom-6 lg:bottom-12 lg:left-12 flex z-30">
-                    <NavLink to={`/${content.id}`} >
-                        <div className="w-20 h-20">
+                    <ExpandButtonWrapper color={content.color} >
+                        <div className="w-20 h-20" onClick={
+                            () => setTimeout(() => {
+                                console.log(content.color)
+                                history.push({
+                                    pathname: content.id,
+                                    state: {color: content.color}
+                                })
+                            }, 300)}>
                             <ExpandAnimation />
                         </div>
-                    </NavLink>
+                    </ExpandButtonWrapper>
                     <span className="place-self-center responsiveColor">
                         Find out more!
                     </span>

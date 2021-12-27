@@ -16,11 +16,12 @@
     "firebase": "^9.6.1",
     "framer-motion": "^4.1.17",
     "lottie-web": "^5.7.13",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^0.0.0-experimental-3dc41d8a2-20211223",
+    "react-dom": "^0.0.0-experimental-3dc41d8a2-20211223",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
     "react-social-icons": "^5.4.1",
+    "tinycolor2": "^1.4.2",
     "web-vitals": "^1.1.1"
   },
   "scripts": {

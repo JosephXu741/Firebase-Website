@@ -3,6 +3,7 @@ import {Route, Switch, BrowserRouter as Router} from "react-router-dom"
 import Landing from "./patterns/views/Landing.js"
 import MoreProjects from "./patterns/views/MoreProjects.js";
 import ProjectDetail from "./patterns/views/ProjectDetail.js";
+import WipeButtonWrapper from "./patterns/atoms/ExpandButtonWrapper.js";
 
 import { ScrollToTop } from "./helpers/helpers.js";
 
@@ -13,6 +14,7 @@ function App() {
             <ScrollToTop />
             <Switch>
                 <Route exact path="/more-projects" component={MoreProjects} />
+                <Route exact path="/test" component={WipeButtonWrapper} />
                 <Route exact path="/:id" component={ProjectDetail} />
                 <Route path="/" component={Landing} />
             </Switch>
