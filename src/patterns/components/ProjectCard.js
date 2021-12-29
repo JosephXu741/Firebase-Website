@@ -69,7 +69,6 @@ function ProjectCard(props) {
                 <div className="p-4 mb-4 grid z-10">
                     <div className="main-text text-6xl mb-4 responsiveColor" > 
                         <button 
-                            className="transition ease-in-out hover:text-black"
                             onClick={() => openInNewTab(content.link)}>
                             {content.title}
                         </button>
