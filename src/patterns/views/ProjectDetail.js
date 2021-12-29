@@ -5,7 +5,8 @@ import ProjectBrief from '../blocks/ProjectBrief'
 import ProjectContent from '../blocks/ProjectContent'
 import {GetProjectRender} from '../../helpers/projects'
 import {useLocation} from 'react-router-dom'
-import { motion } from "framer-motion"
+import GoBack from '../atoms/GoBack'
+import FadeInWrapper from '../utils/FadeInWrapper'
 
 // import ProjectNotFound from './ProjectNotFound'
 
@@ -30,19 +31,15 @@ function ProjectDetail(props) {
     }, [id])
 
     return (
-        <motion.div 
-            className={`projectDetails h-full flex justify-items-center z-50 text-white`}
-            initial={{opacity: 0}}
-            animate={{opacity: 1}}
-            transition={{ ease: "easeIn", duration: 2 }}
-        >
+        <FadeInWrapper className={`projectDetails h-full flex justify-items-center z-50 text-white`}>
             <Navbar />
                 <div className="grid w-full justify-items-center">
                     <ProjectDetailTitle content={content} />
                     <ProjectBrief content={content} />
                     <ProjectContent content={content} />
                 </div> 
-        </motion.div>
+            <GoBack />
+        </FadeInWrapper>
     )
 }
 

@@ -6,6 +6,7 @@ import Contact from '../blocks/Contact'
 import Navbar from '../partials/Navbar'
 import SwipeButton from '../atoms/SwipeButton'
 import ProjectCardsWrapper from '../blocks/ProjectCardsWrapper'
+import FadeInWrapper from '../utils/FadeInWrapper'
 
 function Landing() {
     const title = useRef();
@@ -20,7 +21,7 @@ function Landing() {
             !refs.footerRef && !refs.headingRef ?
                 changeBackground("#FFF") :
             refs.footerRef && !refs.headingRef ?
-                changeBackground("#ff6060") :
+                changeBackground("#706DFF") :
                 changeBackground("#eaeaea")
         });
         io.observe(title.current)
@@ -37,19 +38,19 @@ function Landing() {
     }
 
     return (
-        <div className="Landing">
+        <FadeInWrapper className="Landing">
             <div className="h-auto grid justify-items-center z-50 ">
                 <Navbar />
                 <Title titleRef={title}/>
                 <ProjectCardsWrapper />
                 <Link to="/more-projects">
                     <div className="w-48">
-                        <SwipeButton text="More Projects" />
+                        <SwipeButton className="w-full box-content border-black border-2" color="black" pin="white" text="More Projects" />
                     </div>
                 </Link>
                 <Contact contactRef={contact}/> 
             </div>
-        </div>
+        </FadeInWrapper>
     )
 }
 

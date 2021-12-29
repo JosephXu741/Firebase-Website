@@ -13,7 +13,7 @@ function Navbar() {
             </div>
             <div className="flex flex-row-reverse h-full space-x-4 space-x-reverse self-center">
                 <div className="body-text place-self-center grid p-4">
-                    <NavLink to="/more-projects" activeClassName="selected">
+                    <NavLink to="/more-projects">
                         Other Projects
                     </NavLink>
                 </div>

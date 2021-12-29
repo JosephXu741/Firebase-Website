@@ -9,6 +9,7 @@ function ProjectCardsWrapper() {
         (async () => {
             const results = await GetProjects()
             setProjects(results)
+            window.scrollTo(0, 0)
         })()
     }, [])
 

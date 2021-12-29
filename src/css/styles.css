@@ -30,7 +30,7 @@
 }
 @media (min-width: 768px) {
   .projectCardWrapper {
-    height: clamp(150px, 50vw, 700px);
+    height: clamp(150px, 47.5vw, 700px);
   }
 }
 .responsiveColor {
@@ -56,12 +56,6 @@
 }
 .nav a:hover {
   color: #ff6060;
-}
-
-.selected {
-  text-decoration-line: underline;
-  text-decoration-color: #ff6060;
-  text-decoration-thickness: 0.15rem;
 }
 
 .contentClamp {
