@@ -1,5 +1,6 @@
-import React, { useRef } from 'react'
-import TitleRender from "../components/TitleRender"
+import React, { Suspense, useRef } from 'react'
+
+const TitleRender = React.lazy(() => import("../components/TitleRender"))
 
 function Title(props) {  
 
@@ -19,7 +20,9 @@ function Title(props) {
     return (
         <div className="grid items-center min-h-screen min-w-full mb-10 md:mb-40 relative">
             <div className="moon w-screen absolute top-0" ref={titleRender}>
-                <TitleRender controls={controls} />
+                <Suspense fallback={<div className="w-full h-full bg-red-200" />}>
+                    <TitleRender controls={controls} />
+                </Suspense>
             </div>
             <div className="titleClamp flex h-full relative space-y-8 justify-self-center items-center z-10">
                 <div className="heading-content block h-auto justify-self-start" 

@@ -81,7 +81,7 @@ function ProjectCard(props) {
                     <ExpandButtonWrapper color={content.color} >
                         <div className="w-20 h-20" ref={expandRef} onClick={
                             () => setTimeout(() => {
-                                console.log(content.color)
+                                document.body.style = `background: ${content.color}`
                                 history.push({
                                     pathname: content.id,
                                     state: {color: content.color}

@@ -1,23 +1,24 @@
-import React from "react";
+import React, { Suspense } from "react";
 import {Route, Switch, BrowserRouter as Router} from "react-router-dom"
-import Landing from "./patterns/views/Landing.js"
-import MoreProjects from "./patterns/views/MoreProjects.js";
-import ProjectDetail from "./patterns/views/ProjectDetail.js";
-import WipeButtonWrapper from "./patterns/atoms/ExpandButtonWrapper.js";
-
+import Loading from "./patterns/views/Loading"
 import { ScrollToTop } from "./helpers/helpers.js";
+import ProjectDetail from "./patterns/views/ProjectDetail"
 
+const Landing = React.lazy(() => import("./patterns/views/Landing.js"))
+const MoreProjects = React.lazy(() => import("./patterns/views/MoreProjects.js"))
 
 function App() {
     return (
         <Router>
             <ScrollToTop />
-            <Switch>
-                <Route exact path="/more-projects" component={MoreProjects} />
-                <Route exact path="/test" component={WipeButtonWrapper} />
-                <Route exact path="/:id" component={ProjectDetail} />
-                <Route path="/" component={Landing} />
-            </Switch>
+            <Suspense fallback={<Loading />}>
+                <Switch>
+                    <Route exact path="/more-projects" component={MoreProjects} />
+                    <Route exact path="/test" component={Loading} />
+                    <Route exact path="/:id" component={ProjectDetail} />
+                    <Route path="/" component={Landing} />
+                </Switch>
+            </Suspense>
         </Router>
     );
 }

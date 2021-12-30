@@ -1,12 +1,13 @@
-import React, { useEffect, useRef} from 'react'
+import React, { Suspense, useEffect, useRef} from 'react'
 import anime from "animejs"
 import {Link} from 'react-router-dom'
-import Title from '../blocks/Title'
 import Contact from '../blocks/Contact'
 import Navbar from '../partials/Navbar'
 import SwipeButton from '../atoms/SwipeButton'
-import ProjectCardsWrapper from '../blocks/ProjectCardsWrapper'
 import FadeInWrapper from '../utils/FadeInWrapper'
+import Title from '../blocks/Title'
+
+const ProjectCardsWrapper = React.lazy(() => import('../blocks/ProjectCardsWrapper'))
 
 function Landing() {
     const title = useRef();
@@ -42,7 +43,9 @@ function Landing() {
             <div className="h-auto grid justify-items-center z-50 ">
                 <Navbar />
                 <Title titleRef={title}/>
-                <ProjectCardsWrapper />
+                <Suspense fallback={<div className="w-full h-96 bg-red-200" />}>
+                    <ProjectCardsWrapper />
+                </Suspense>
                 <Link to="/more-projects">
                     <div className="w-48">
                         <SwipeButton className="w-full box-content border-black border-2" color="black" pin="white" text="More Projects" />

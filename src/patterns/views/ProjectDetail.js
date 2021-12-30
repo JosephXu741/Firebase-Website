@@ -4,7 +4,6 @@ import ProjectDetailTitle from '../blocks/ProjectDetailTitle'
 import ProjectBrief from '../blocks/ProjectBrief'
 import ProjectContent from '../blocks/ProjectContent'
 import {GetProjectRender} from '../../helpers/projects'
-import {useLocation} from 'react-router-dom'
 import GoBack from '../atoms/GoBack'
 import FadeInWrapper from '../utils/FadeInWrapper'
 
@@ -13,17 +12,11 @@ import FadeInWrapper from '../utils/FadeInWrapper'
 function ProjectDetail(props) {
     const [content, setContent] = useState(null)
     const id = props.match.params.id
-    const location = useLocation()
-
-    if (location.state) {
-        document.body.style = `background: ${location.state.color};`
-    }
 
     useEffect(() => {
         (async () => {
             const results = await GetProjectRender(id)
             setContent(results)
-            console.log(results)
             if (results) {
                 document.body.style = `background: ${results.color};`
             }
