@@ -3,9 +3,10 @@ import {Route, Switch, BrowserRouter as Router} from "react-router-dom"
 import Loading from "./patterns/views/Loading"
 import { ScrollToTop } from "./helpers/helpers.js";
 import ProjectDetail from "./patterns/views/ProjectDetail"
+import pMinDelay from 'p-min-delay';
 
-const Landing = React.lazy(() => import("./patterns/views/Landing.js"))
-const MoreProjects = React.lazy(() => import("./patterns/views/MoreProjects.js"))
+const Landing = React.lazy(() => pMinDelay(import("./patterns/views/Landing.js"), 500))
+const MoreProjects = React.lazy(() => pMinDelay(import("./patterns/views/MoreProjects.js"), 500))
 
 function App() {
     return (

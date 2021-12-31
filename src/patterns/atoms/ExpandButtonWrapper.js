@@ -19,7 +19,7 @@ function WipeButtonWrapper({children, color, ...props}) {
             })
             timeline.add({
                 targets: expandDiv.current,
-                scale: 300,
+                scale: 400,
                 easing: 'linear',
                 duration: 300
             })
